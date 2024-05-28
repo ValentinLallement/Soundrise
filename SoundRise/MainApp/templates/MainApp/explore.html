@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Soundrise | Find the next beat for your song</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/style2.css' %}">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+      </head>
+</head>
+<body>
+    <div id="logoSmall">
+        <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.68 40.55">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: url(#Nouvelle_nuance_de_dégradé_1);
+                        stroke-width: 0px;
+                    }
+                </style>
+                <linearGradient id="Nouvelle_nuance_de_dégradé_1" data-name="Nouvelle nuance de dégradé 1" x1="0" y1="20.28" x2="63.68" y2="20.28" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#c5589b"/>
+                    <stop offset="1" stop-color="#3e68af"/>
+                </linearGradient>
+            </defs>
+            <g id="Calque_1-2" data-name="Calque 1">
+                <path class="cls-1" d="M53.45,19.35c0-.06,0-.12,0-.18,0-6.56-4.87-11.88-10.87-11.88-1.37,0-2.68.29-3.88.8C36.6,3.32,31.96,0,26.56,0c-7.37,0-13.35,6.17-13.35,13.78,0,.75.07,1.48.19,2.2-.81-.22-1.66-.35-2.53-.35C4.87,15.63,0,21.21,0,28.09c0,6.4,4.21,11.66,9.62,12.37v.09h41.6c6.88,0,12.46-4.79,12.46-10.69,0-5.25-4.42-9.61-10.23-10.51Z"/>
+            </g>
+        </svg>
+    </div>
+    <div id="TopBar">
+        <div class="topBarClickable"><a href="{% url 'index' %}">Acceuil</a></div>
+        <div class="topBarClickable"><a href="{% url 'explore' %}">Parcourir</a></div>
+        <div class="topBarClickable"><a>Compte</a></div>
+        <div class="topBarClickable"><a>Fil d'actualité</a></div>
+        <div class="topBarClickable"><a>Paramètre</a></div>
+    </div>
+
+    <div id="pagePool">
+        <div id="SideMenu">
+            <div class="menu-item">
+                <span class="menu-title">Theme</span>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="genre" value="pop"> Pop</label><br>
+                    <label><input type="checkbox" name="genre" value="rock"> Rock</label><br>
+                    <label><input type="checkbox" name="genre" value="hip-hop"> Hip Hop</label><br>
+                    <label><input type="checkbox" name="genre" value="jazz"> Jazz</label><br>
+                    <label><input type="checkbox" name="genre" value="electronic"> Electronic</label><br>
+                    <!-- Add more music genres as needed -->
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Instrument</span>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="instrument" value="drums" > Drums</label><br>
+                    <label><input type="checkbox" name="instrument" value="guitar"> Guitar</label><br>
+                    <label><input type="checkbox" name="instrument" value="piano"> Piano</label><br>
+                    <!-- Add more instruments as needed -->
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Date</span>
+                <div class="dropdown-content">
+                    <!-- Dropdown content for selecting date range -->
+                    <input type="date" name="startDate"> - <input type="date" name="endDate">
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Artist</span>
+                <div class="dropdown-content">
+                    <input type="text" name="artistName" placeholder="Enter artist name">
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Tempo</span>
+                <div class="dropdown-content">
+                    <label><input type="radio" name="tempo" value="slow"> Slow</label><br>
+                    <label><input type="radio" name="tempo" value="medium"> Medium</label><br>
+                    <label><input type="radio" name="tempo" value="fast"> Fast</label><br>
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Price</span>
+                <div class="dropdown-content">
+                    <input type="range" name="priceRange" min="0" max="100" value="0">
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Rating</span>
+                <div class="dropdown-content">
+                    <label><input type="checkbox" name="rating" value="5"> 5 Stars</label><br>
+                    <label><input type="checkbox" name="rating" value="4"> 4 Stars</label><br>
+                    <label><input type="checkbox" name="rating" value="3"> 3 Stars</label><br>
+                    <!-- Add more rating options as needed -->
+                </div>
+            </div>
+            <div class="menu-item">
+                <span class="menu-title">Filter</span>
+                <div class="dropdown-content">
+                    <!-- Dropdown content for additional filters -->
+                    <!-- Example: Checkbox to filter only free beats -->
+                    <label><input type="checkbox" name="freeBeats"> Free Beats Only</label><br>
+                </div>
+            </div>
+            <!-- Add more menu items as needed -->
+        </div>
+
+        <div id="miniTopBar">
+            <div class="topBarClickable"><input type="text" class="search-bar" placeholder="Search..."></div>
+            <div id="left">
+                <div class="topBarClickable"><a>2222222</a></div>
+                <div class="topBarClickable"><a>3333333</a></div>
+            </div>
+        </div>
+    <div>
+
+
+    
+    
+
+</body>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var menuItems = document.querySelectorAll('.menu-item');
+
+        menuItems.forEach(function(item) {
+            var title = item.querySelector('.menu-title');
+            var dropdown = item.querySelector('.dropdown-content');
+
+            // Toggle dropdown content when clicking on the title
+            title.addEventListener('click', function() {
+                dropdown.classList.toggle('open'); // Toggle 'open' class
+
+                if (dropdown.style.maxHeight) {
+                    dropdown.style.maxHeight = null;
+                    item.style.paddingBottom = null; // Remove paddingBottom
+                    item.classList.remove('open-menu'); // Remove 'open-menu' class if dropdown is closed
+                } else {
+                    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+                    item.style.paddingBottom = "20px"; // Set paddingBottom
+                    item.classList.add('open-menu'); // Add 'open-menu' class if dropdown is open
+                }
+            });
+        });
+    });
+</script>
+</html>
