@@ -1,0 +1,224 @@
+body, html {
+    height: 100%; /* Ensure the body and html elements fill the entire viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to layout children */
+    flex-direction: column; /* Stack child elements vertically */
+    font-family: Roboto;
+    background-color: #1e1e1e;
+}
+
+#MainlogoSmall {
+
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 1%;
+
+}
+#TopBar {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+    border-bottom: 1px solid #9c9b9b;
+}
+
+.topBarClickable {
+    margin: 0 20px; /* space between clickable items */
+    color: aliceblue;
+    font-family: Roboto;
+    font-weight: 200;
+
+}
+
+.topBarClickable a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* customize as needed */
+}
+
+#pagePool {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 2%;
+    background-image: url('../images/weves.svg'); /* Add the SVG background */
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: #1e1E1E;
+    border-radius: 30px; /* Border radius for the container */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    background: linear-gradient(#1e1E1E, #1e1E1E) padding-box,
+                linear-gradient(to right, #3E6DB4, #B52781) border-box;
+    border-radius: 30px;
+    border: 8px solid transparent;
+        
+}
+
+select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #1e1E1E;
+    color: #818181;
+    outline: none;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    padding-left: 0; /* Adjust padding as needed */
+}
+
+select option {
+    background: #1e1E1E;
+    color: #fff;
+    
+}
+
+select:focus {
+    border: none; /* Remove outline on focus */
+}
+
+/* Optional: add custom dropdown arrow */
+.countryf::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    pointer-events: none; /* Allows clicking on the select */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; /* Adjust size */
+    height: 12px; /* Adjust size */
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23dadada" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat center center;
+    background-size: contain; /* Make sure the SVG fits the container */
+}
+
+.form-container {
+    padding: 50px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    flex: 1;
+    background: #1e1E1E;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #1e1E1E;
+    color: #fff;
+    outline: none;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding-left: 0px;
+}
+
+button {
+    padding: 15px;
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(120deg, #3e6db436, rgba(181, 39, 129, 0.185)); /* Blue to purple gradient */
+    transition: opacity .25s ease-in-out;
+    -moz-transition: opacity .25s ease-in-out;
+    -webkit-transition: opacity .25s ease-in-out;
+}
+
+button:hover {
+    background: linear-gradient(120deg, #3E6DB4, #B52781); /* Blue to purple gradient */
+}
+
+.social-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+.centerDaShitButton {
+    display: flex;
+    justify-content: center;
+}
+.social {
+    flex: 1;
+    padding: 10px;
+    margin: 0 5px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.google { background: #db4437; }
+.facebook { background: #4267b2; }
+.apple { background: #000; }
+
+a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+#onDaRight {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    font-size: small;
+}
+
+#separation {
+    background-color: #ffffff;
+    height: 30em;
+    width: 1px;
+    align-self: center;
+}
+.form-div {
+    display: flex;
+    position: relative; 
+    border-bottom: 1px solid #d9d9d9;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.small-svg {
+    width: 15px; /* Adjust according to your design */
+    height: auto;
+    margin-right: 10px; /* Add some spacing between the SVG and the input */
+}
+.medium-svg {
+    width: 20px; /* Adjust according to your design */
+    height: auto;
+    margin-right: 10px; /* Add some spacing between the SVG and the input */
+}
+#singupusing {
+    display: flex;
+    justify-content: center;
+}
+.error {
+    background-color: #db453765;
+    border: #db4437;
+    border-radius: 20px;
+    padding: 20px;
+}
