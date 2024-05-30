@@ -10,7 +10,6 @@ body, html {
 body {
     background-color: #1e1e1e;
 }
-
 #TopBar {
     display: flex;
     align-items: center; /* vertically align items in the center */
@@ -19,7 +18,26 @@ body {
     padding-top: 1%;
     padding-bottom: 1.5%;
     border-bottom: 1px solid #9c9b9b;
+    position: relative; /* ensure that the positioning is within the relative context */
 }
+
+#right-top {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    right: 10px; /* position it 10px from the right end */
+    top: 50%;
+    transform: translateY(-50%); /* vertically center it */
+}
+
+#right-top {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 1%;
+}
+
 
 #logoSmall {
     margin-right: 10px; /* space between logo and the first clickable item */

@@ -5,3 +5,6 @@ def index(request):
 
 def explore(request):
     return render(request, 'MainApp/explore.html')
+
+def login(request):
+    return render(request, 'MainApp/login.html')
