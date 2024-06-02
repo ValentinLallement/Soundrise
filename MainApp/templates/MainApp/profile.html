@@ -50,16 +50,21 @@
 
     <div id="pagePool">
         <div id="SideMenu">
-
-            <!-- menu -->
+            {% if user.profile_picture %}
+                <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="profile-picture">
+            {% else %}
+                <p>No profile picture uploaded</p>
+            {% endif %}
+            
+            <form action="{% url 'upload_profile_picture' %}" method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+                <input type="file" name="profile_picture">
+                <button type="submit">Upload Picture</button>
+            </form>
         </div>
 
         <div id="miniTopBar">
-            <div class="topBarClickable"><input type="text" class="search-bar" placeholder="Search..."></div>
-            <div id="left">
-                <div class="topBarClickable"><a>2222222</a></div>
-                <div class="topBarClickable"><a>3333333</a></div>
-            </div>
+            <h1> {{ user.username }}</h1>
         </div>
     <div>
 

@@ -69,6 +69,12 @@ body {
     display: none;
 }
 
+.profile-picture {
+    width: 200px; /* Set the width of the image */
+    height: 200px;
+    border-radius: 50%; /* Apply circular border-radius */
+}
+
 .menu-item {
     padding-bottom: 0px;
     cursor: pointer;

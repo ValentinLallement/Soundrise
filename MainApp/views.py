@@ -1,6 +1,6 @@
 from django.shortcuts import render, redirect
 from django.contrib.auth import authenticate, login
-from .forms import RegisterForm
+from .forms import RegisterForm, ProfilePictureForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import logout
 
@@ -39,7 +39,19 @@ def explore(request):
 
 @login_required
 def profile(request):
-    return render(request, 'MainApp/profile.html')
+    user = request.user
+    return render(request, 'MainApp/profile.html', {'user': user})
+
+def upload_profile_picture(request):
+    if request.method == 'POST':
+        form = ProfilePictureForm(request.POST, request.FILES, instance=request.user)
+        if form.is_valid():
+            form.save()
+            return redirect('profile')
+    else:
+        form = ProfilePictureForm(instance=request.user)
+    return render(request, 'upload_profile_picture.html', {'form': form})
+
 
 def logout_view(request):
     logout(request)
