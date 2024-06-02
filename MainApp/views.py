@@ -38,8 +38,8 @@ def explore(request):
     return render(request, 'MainApp/explore.html')
 
 @login_required
-def profil(request):
-    return render(request, 'MainApp/profil.html')
+def profile(request):
+    return render(request, 'MainApp/profile.html')
 
 def logout_view(request):
     logout(request)
