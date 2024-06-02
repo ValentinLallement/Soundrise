@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Successful</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #1e1e1e;
+            color: #fff; /* Text color */
+            text-align: center;
+            padding-top: 80px;
+            margin: 0;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .message {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #4CAF50; /* Accent color */
+        }
+
+        .button {
+            display: inline-block;
+            padding: 20px 40px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+
+        .button:hover {
+            background-color: #8645a0;
+        }
+
+        /* Add a subtle shadow effect */
+        .button:hover,
+        .button:focus {
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Responsive styles */
+        @media only screen and (max-width: 600px) {
+            .message {
+                font-size: 36px;
+            }
+
+            .button {
+                padding: 15px 30px;
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="message">
+            <p>Login successful!</p>
+        </div>
+        <a href="{% url 'index' %}" class="button">Go to Home Page</a>
+    </div>
+</body>
+</html>
