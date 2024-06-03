@@ -282,56 +282,45 @@
         </div>
     </div>
     <script>
-
         function basepa() {
-          window.location.href = "parametre-default.html";
+            window.location.href = "{% url 'setting_view' 'parametre-default' %}";
         }
         function baseta() {
-          window.location.href = "parametre-tableau.html";
+            window.location.href = "{% url 'setting_view' 'parametre-tableau' %}";
         }
         function basea() {
-          window.location.href = "parametre-activite.html";
+            window.location.href = "{% url 'setting_view' 'parametre-activite' %}";
         }
         function baseh() {
-          window.location.href = "parametre-historique-beat.html";
+            window.location.href = "{% url 'setting_view' 'parametre-historique-beat' %}";
         }
         function basetr() {
-          window.location.href = "parametre-transactions.html";
+            window.location.href = "{% url 'setting_view' 'parametre-transactions' %}";
         }
         function baseo() {
-          window.location.href = "parametre-abonnement.html";
+            window.location.href = "{% url 'setting_view' 'parametre-abonnement' %}";
         }
         function baser() {
-          window.location.href = "parametre-remboursement.html";
+            window.location.href = "{% url 'setting_view' 'parametre-remboursement' %}";
         }
         function basei() {
-          window.location.href = "parametre-interface.html";
+            window.location.href = "{% url 'setting_view' 'parametre-interface' %}";
         }
         function basep() {
-          window.location.href = "parametre-conexions.html";
+            window.location.href = "{% url 'setting_view' 'parametre-connexions' %}";
         }
         function basec() {
-          window.location.href = "parametre-confidentialite.html";
+            window.location.href = "{% url 'setting_view' 'parametre-confidentialite' %}";
         }
         function baseai() {
-          window.location.href = "parametre-aide.html";
+            window.location.href = "{% url 'setting_view' 'parametre-aide' %}";
         }
         function baseaf() {
-          window.location.href = "parametre-activite-fav.html";
+            window.location.href = "{% url 'setting_view' 'parametre-activite-fav' %}";
         }
         function baseac() {
-          window.location.href = "parametre-activite-com.html";
-        }
-        function basehb() {
-          window.location.href = "parametre-historique-beat.html";
-        }
-        function baseha() {
-          window.location.href = "parametre-historique-artist.html";
-        }
-        function basehr() {
-          window.location.href = "parametre-historique-recherche.html";
+            window.location.href = "{% url 'setting_view' 'parametre-activite-com' %}";
         }
     </script>
-
-    
 </body>
+</html>

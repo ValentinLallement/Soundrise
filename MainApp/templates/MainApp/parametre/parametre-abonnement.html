@@ -207,41 +207,46 @@
       </div>
 
       
-      
       <script>
-          function basepa() {
-            window.location.href = "parametre-default.html";
-          }
-          function baseta() {
-            window.location.href = "parametre-tableau.html";
-          }
-          function basea() {
-            window.location.href = "parametre-activite.html";
-          }
-          function baseh() {
-            window.location.href = "parametre-historique-beat.html";
-          }
-          function basetr() {
-            window.location.href = "parametre-transactions.html";
-          }
-          function baseo() {
-            window.location.href = "parametre-abonnement.html";
-          }
-          function baser() {
-            window.location.href = "parametre-remboursement.html";
-          }
-          function basei() {
-            window.location.href = "parametre-interface.html";
-          }
-          function basep() {
-            window.location.href = "parametre-connexions.html";
-          }
-          function basec() {
-            window.location.href = "parametre-confidentialite.html";
-          }
-          function baseai() {
-            window.location.href = "parametre-aide.html";
-          }
-          </script>
-  </body>
+        function basepa() {
+            window.location.href = "{% url 'setting_view' 'parametre-default' %}";
+        }
+        function baseta() {
+            window.location.href = "{% url 'setting_view' 'parametre-tableau' %}";
+        }
+        function basea() {
+            window.location.href = "{% url 'setting_view' 'parametre-activite' %}";
+        }
+        function baseh() {
+            window.location.href = "{% url 'setting_view' 'parametre-historique-beat' %}";
+        }
+        function basetr() {
+            window.location.href = "{% url 'setting_view' 'parametre-transactions' %}";
+        }
+        function baseo() {
+            window.location.href = "{% url 'setting_view' 'parametre-abonnement' %}";
+        }
+        function baser() {
+            window.location.href = "{% url 'setting_view' 'parametre-remboursement' %}";
+        }
+        function basei() {
+            window.location.href = "{% url 'setting_view' 'parametre-interface' %}";
+        }
+        function basep() {
+            window.location.href = "{% url 'setting_view' 'parametre-connexions' %}";
+        }
+        function basec() {
+            window.location.href = "{% url 'setting_view' 'parametre-confidentialite' %}";
+        }
+        function baseai() {
+            window.location.href = "{% url 'setting_view' 'parametre-aide' %}";
+        }
+        function baseaf() {
+            window.location.href = "{% url 'setting_view' 'parametre-activite-fav' %}";
+        }
+        function baseac() {
+            window.location.href = "{% url 'setting_view' 'parametre-activite-com' %}";
+        }
+    </script>
+</body>
 </html>

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" type="text/css" href="parametre-connexions.css">
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'css/parametre/parametre-connexions.css' %}">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
         <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
     </head>
-</head>
 <body>
     <a href="{% url 'index' %}"><div id="logoSmall">
         <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.68 40.55">
@@ -166,40 +165,46 @@
     </div>
 
     
-    
     <script>
         function basepa() {
-          window.location.href = "parametre-default.html";
+            window.location.href = "{% url 'setting_view' 'parametre-default' %}";
         }
         function baseta() {
-          window.location.href = "parametre-tableau.html";
+            window.location.href = "{% url 'setting_view' 'parametre-tableau' %}";
         }
         function basea() {
-          window.location.href = "parametre-activite.html";
+            window.location.href = "{% url 'setting_view' 'parametre-activite' %}";
         }
         function baseh() {
-          window.location.href = "parametre-historique-beat.html";
+            window.location.href = "{% url 'setting_view' 'parametre-historique-beat' %}";
         }
         function basetr() {
-          window.location.href = "parametre-transactions.html";
+            window.location.href = "{% url 'setting_view' 'parametre-transactions' %}";
         }
         function baseo() {
-          window.location.href = "parametre-abonnement.html";
+            window.location.href = "{% url 'setting_view' 'parametre-abonnement' %}";
         }
         function baser() {
-          window.location.href = "parametre-remboursement.html";
+            window.location.href = "{% url 'setting_view' 'parametre-remboursement' %}";
         }
         function basei() {
-          window.location.href = "parametre-interface.html";
+            window.location.href = "{% url 'setting_view' 'parametre-interface' %}";
         }
         function basep() {
-          window.location.href = "parametre-connexions.html";
+            window.location.href = "{% url 'setting_view' 'parametre-connexions' %}";
         }
         function basec() {
-          window.location.href = "parametre-confidentialite.html";
+            window.location.href = "{% url 'setting_view' 'parametre-confidentialite' %}";
         }
         function baseai() {
-          window.location.href = "parametre-aide.html";
+            window.location.href = "{% url 'setting_view' 'parametre-aide' %}";
         }
-        </script>
+        function baseaf() {
+            window.location.href = "{% url 'setting_view' 'parametre-activite-fav' %}";
+        }
+        function baseac() {
+            window.location.href = "{% url 'setting_view' 'parametre-activite-com' %}";
+        }
+    </script>
 </body>
+</html>
