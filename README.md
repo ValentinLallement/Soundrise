@@ -1,4 +1,5 @@
-# 🎶 SoundRise
+# SoundRise
+![logo1](https://github.com/desboisGIT/Soundrise/assets/90150299/668c9315-c90c-4717-94cb-7e6550143d90)
 
 Welcome to **SoundRise**! An innovative platform designed to connect musicians from around the globe. Create, share, and explore new music with our user-friendly interface.
 
