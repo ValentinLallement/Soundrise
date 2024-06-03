@@ -8,15 +8,6 @@ body, html {
     background-color: #1e1e1e;
 }
 
-#MainlogoSmall {
-
-    margin-right: 10px; /* space between logo and the first clickable item */
-    width: 4%;
-    position: absolute;
-    left: 4%;
-    top: 1%;
-
-}
 #TopBar {
     display: flex;
     align-items: center; /* vertically align items in the center */
@@ -25,6 +16,27 @@ body, html {
     padding-top: 1%;
     padding-bottom: 1.5%;
     border-bottom: 1px solid #9c9b9b;
+    position: relative; /* ensure that the positioning is within the relative context */
+}
+#loginButton{
+        padding: 15px;
+        width: 100%;
+        border: none;
+        border-radius: 30px;
+        color: #fff;
+        cursor: pointer;
+        background: linear-gradient(120deg, #3e6db4, rgb(181, 39, 129)); /* Blue to purple gradient */
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+}
+
+#logoSmall {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 2%;
 }
 
 .topBarClickable {
@@ -39,7 +51,6 @@ body, html {
     text-decoration: none;
     color: rgb(255, 255, 255); /* customize as needed */
 }
-
 #pagePool {
     display: flex;
     align-items: center;
@@ -178,9 +189,7 @@ a {
     text-decoration: none;
 }
 
-a:hover {
-    text-decoration: underline;
-}
+
 #onDaRight {
     display: flex;
     justify-content: space-between;

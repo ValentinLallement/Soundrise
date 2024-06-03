@@ -31,10 +31,10 @@
     </div></a>
     <div id="TopBar">
         <div class="topBarClickable"><a href="{% url 'index' %}">Acceuil</a></div>
-        <div class="topBarClickable"><a href="explore.html">Parcourir</a></div>
+        <div class="topBarClickable"><a href="{% url 'explore' %}">Parcourir</a></div>
         <div class="topBarClickable"><a>Compte</a></div>
         <div class="topBarClickable"><a>Fil d'actualité</a></div>
-        <div class="topBarClickable"><a href ="parametre-default.html">Paramètre</a> </a></div>
+        <div class="topBarClickable"><a href ="{% url 'setting_view' 'parametre-default' %}">Paramètre</a></div>
     </div>  
     
     <div id="page">
