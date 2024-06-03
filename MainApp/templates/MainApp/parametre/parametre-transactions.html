@@ -44,7 +44,7 @@
                 {% if user.profile_picture %}
                     <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
                 {% else %}
-                    <img src="{% static 'images/Fichier_2.png' %}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
+                    <img src="{% static 'images/default.png' %}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
                 {% endif %}
                 <div id="profile-menu" class="profile-menu">
                     <a href="{% url 'profile' %}">Profile</a>
