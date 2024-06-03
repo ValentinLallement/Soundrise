@@ -14,7 +14,8 @@ urlpatterns = [
     path('profile/', views.profile, name='profile'),
     path('logout/', views.logout_view, name='logout'),
     path('upload_profile_picture/', views.upload_profile_picture, name='upload_profile_picture'),
-    path('settings/<str:page>/', views.setting_view, name='setting_view'), #MainApp/parametre/parametre-active-com.html
+    path('settings/<str:page>/', views.setting, name='setting_view'),
+    path('settings/', views.setting, {'page': 'default'}, name='setting'),
     
 ]
 

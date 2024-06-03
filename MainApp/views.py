@@ -60,3 +60,7 @@ def logout_view(request):
 def setting_view(request, page):
     return render(request, 'MainApp/parametre/'+page+'.html')
 
+
+
+def setting(request, page="default"):
+    return render(request, 'MainApp/parametre/parametre-default.html', {'page': page})
