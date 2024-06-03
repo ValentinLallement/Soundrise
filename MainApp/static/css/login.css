@@ -1,3 +1,4 @@
+
 body, html {
     height: 100%; /* Ensure the body and html elements fill the entire viewport */
     margin: 0; /* Remove default margin */
@@ -5,15 +6,17 @@ body, html {
     display: flex; /* Use flexbox to layout children */
     flex-direction: column; /* Stack child elements vertically */
     font-family: Roboto;
-    background-color: #1e1e1e;
 }
 
+body {
+    background-color: #1e1e1e;
+}
 #TopBar {
     display: flex;
     align-items: center; /* vertically align items in the center */
     justify-content: center; /* horizontally center items */
     color: aliceblue;
-    padding-top: 1%;
+    padding-top: 1.5%;
     padding-bottom: 1.5%;
     border-bottom: 1px solid #9c9b9b;
     position: relative; /* ensure that the positioning is within the relative context */
@@ -51,6 +54,7 @@ body, html {
     text-decoration: none;
     color: rgb(255, 255, 255); /* customize as needed */
 }
+
 #pagePool {
     display: flex;
     align-items: center;

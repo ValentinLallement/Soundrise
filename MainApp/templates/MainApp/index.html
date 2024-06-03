@@ -21,9 +21,29 @@
 
     <div style="flex: 1;"></div>
 
-    <div id="right-top" style="margin-right: 40px;"><button id="loginButton"><a href="{% url 'loginAndRegister' %}" style="color: #fff; font-weight: 900;">SE CONECTER</a></button></div>
-    
+    {% if request.user.is_authenticated %}
+        <div class="profile-menu-container">
+            {% if user.profile_picture %}
+                <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
+            {% else %}
+                <img src="{% static 'images/Fichier_2.png' %}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
+            {% endif %}
+            <div id="profile-menu" class="profile-menu">
+                <a href="{% url 'profile' %}">Profile</a>
+                <a href="{% url 'setting_view' 'parametre-default' %}">Settings</a>
+                <a href="{% url 'logout' %}">Logout</a>
+            </div>
+        </div>
+    {% else %}
+        <div id="right-top" style="margin-right: 40px;">
+            <button id="loginButton"><a href="{% url 'loginAndRegister' %}" style="color: #fff; font-weight: 900; text-decoration: none;">SE CONNECTER</a></button>
+        </div>
+    {% endif %}
+  
   </div>
+
+
+
   <div id="logoSmall">
     <svg id="LogoCloud" data-name="LogoCloud" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.68 40.55">
         <defs>
@@ -265,5 +285,26 @@
 </svg>
 
 </body>
-<script type="text/javascript" src="script.js"></script>
+<script type="text/javascript">
+document.addEventListener('DOMContentLoaded', function () {
+    var profileMenuButton = document.getElementById('profile-menu-button');
+    var profileMenu = document.getElementById('profile-menu');
+
+    profileMenuButton.addEventListener('click', function () {
+        if (profileMenu.style.display === 'block') {
+            profileMenu.style.display = 'none';
+        } else {
+            profileMenu.style.display = 'block';
+        }
+    });
+
+    window.addEventListener('click', function (event) {
+        if (!event.target.matches('#profile-menu-button') && !event.target.closest('.profile-menu-container')) {
+            profileMenu.style.display = 'none';
+        }
+    });
+});
+
+
+</script>
 </html>
