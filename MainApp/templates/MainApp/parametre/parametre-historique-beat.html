@@ -120,9 +120,9 @@
             </span>
             <div class = "onglet">
                 <div class="recherche">
-                    <button class="but" onclick="basehb()" ><a href="parametre-historique.html"></a>Beat</button>
-                    <button class="but" onclick="baseha()" ><a href="parametre-historique-fav.html"></a>Artist</button>
-                    <button class="but"onclick="basehr()" ><a href="parametre-historique-recherche.html"></a>Recherche</button>
+                    <button class="but" onclick="basehb()" ><a href="{% url 'setting_view' 'parametre-historique-beat' %}"></a>Beat</button>
+                    <button class="but" onclick="baseha()" ><a href="{% url 'setting_view' 'parametre-historique-artist' %}"></a>Artist</button>
+                    <button class="but"onclick="basehr()" ><a href="{% url 'setting_view' 'parametre-historique-recherche' %}"></a>Recherche</button>
                 </div>
                 <div class="box">
                   <div class="ligne">
@@ -314,8 +314,14 @@
         function basea() {
             window.location.href = "{% url 'setting_view' 'parametre-activite' %}";
         }
-        function baseh() {
+        function basehb() {
             window.location.href = "{% url 'setting_view' 'parametre-historique-beat' %}";
+        }
+        function basehr() {
+            window.location.href = "{% url 'setting_view' 'parametre-historique-recherche' %}";
+        }
+        function baseha() {
+            window.location.href = "{% url 'setting_view' 'parametre-historique-artist' %}";
         }
         function basetr() {
             window.location.href = "{% url 'setting_view' 'parametre-transactions' %}";
