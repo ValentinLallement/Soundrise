@@ -1,0 +1,343 @@
+body, html {
+    height: 100%; /* Ensure the body and html elements fill the entire viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to layout children */
+    flex-direction: column; /* Stack child elements vertically */
+    font-family: Roboto;
+}
+
+body {
+    background-color: #1e1e1e;
+    
+    
+}
+
+#TopBar {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #9c9b9b;
+}
+
+#logoSmall {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 1%;
+}
+
+.topBarClickable {
+    margin: 0 20px; /* space between clickable items */
+    color: aliceblue;
+    font-family: Roboto;
+    font-weight: 200;
+
+}
+
+.topBarClickable a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* customize as needed */
+}
+
+
+#miniTopBar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-right: 20px;
+    border-bottom: 1px solid #9c9b9b;
+    max-height: 5%;
+    margin-left: -20px;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 20px; /* Adjust the border radius as needed */
+    padding: 6% 12%; /* Adjust padding as needed */
+    font-size: 100%; /* Adjust font size as needed */
+    background-color: #323232; /* Background color */
+    color: #ffffff; /* Text color */
+    width: 80%; /* Set the width as needed */
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth color change */
+    margin-left: 16px;
+    
+}
+
+.search-bar::placeholder {
+    color: #ffffff; /* Placeholder color */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove focus outline */
+    background-color: #3c3c3c; /* Background color on focus */
+    color: #e7e7e7; /* Text color on focus */
+}
+
+#left {
+    display: flex;
+
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+}
+.menu-parametre {
+    
+    height: 100%; /* Fill the height of its parent container */
+    width: 17%; /* Adjust width as needed */
+    border-right: 1px solid #9c9b9b;
+    padding-left: 0%;
+    padding-right: 2%;
+    overflow-y:hidden; /* Enable vertical scrolling */
+    
+    
+    
+}
+.menu-parametre::-webkit-scrollbar {
+    display: none;
+    
+}
+
+.menu-parametre::-moz-scrollbar {
+    display: none;
+    
+}
+
+.menu-parametre-item:hover {
+    background-color: #282828ff ;
+}
+
+ 
+.menu-parametre-item {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white; 
+    background-color: transparent;
+    border: none ;
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-y:auto;    
+    
+
+}   
+
+.item1{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white;  
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border: none ;
+}
+/*#e66465, #9198e5*/
+    
+    
+.item-2 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color :red ; 
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}  
+
+.page {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    
+    flex-grow: 1;
+    background-color: blueviolet;
+    
+    
+    
+}
+.bas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:80% ; 
+      
+
+}
+.onglet{
+    width: 100%;
+    height: 100%;
+    background-color: #1e1e1e ;
+    display: flex;
+    flex-direction: row;
+    overflow-y: hidden;
+    margin-top: 2%;
+    
+    
+}
+.partie{
+    height: 100%;
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.titre{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-left: -14%;
+    margin-bottom: 5%;
+}
+.titre2{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-left: -2%;
+    margin-bottom: 5%;
+}
+.titre3{
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-left: -14%;
+    margin-bottom: 5%;
+    margin-top: -10%;
+}
+.titre4{
+    color: darkgray;
+    font-size: 20px;
+    text-align: center;
+    margin-left: 10%;
+    margin-bottom: 5%;
+}
+.box{
+    height: 100%;
+    width: 90%;
+    margin-left: 5%;
+    overflow-y: scroll;
+    
+}
+.box2{
+    height: 50%;
+    width: 90%;
+    
+    
+}
+.question{
+    height: 10%;
+    width: 90%;
+    border-style: groove;
+    background: linear-gradient(to right, darkviolet,blue) ;
+    margin-top: 2%;
+    text-indent: 10%;
+    margin-left: 5%;
+    color:white;
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.question:hover{
+    filter: brightness(1.5);
+}
+.contact{
+    
+    border-radius: 15px;
+    border: none;
+    height: 30px;
+    width: 100px;
+    margin-left: 39%;
+}
+.contact:hover{
+    
+    background:linear-gradient(to right, darkviolet,blue) ;
+    color: white;
+}
+.avis{
+   margin-left: 22%;
+   height: 100%;
+   width: 60%;
+   text-align:center;
+background-color: #282828ff;
+color: #ffffff;
+border: none;
+
+}
+.send{
+    border-radius: 15px;
+    border: none; 
+    height: 20px;
+    width: 70px;
+}
+.send:hover{
+    
+    background:linear-gradient(to right, darkviolet,blue) ;
+    color: white;
+}
+.rating{
+    height: 20%;
+    width: 60%;
+    margin-left: 5%;
+    margin-top: 5%;
+}
+.rating:not(:checked) > input {
+    position: absolute;
+    appearance: none;
+  }
+  
+  .rating:not(:checked) > label {
+    float: right;
+    cursor: pointer;
+    font-size: 30px;
+    color: #666;
+  }
+  
+  .rating:not(:checked) > label:before {
+    content: '★';
+  }
+  
+  .rating > input:checked + label:hover,
+  .rating > input:checked + label:hover ~ label,
+  .rating > input:checked ~ label:hover,
+  .rating > input:checked ~ label:hover ~ label,
+  .rating > label:hover ~ input:checked ~ label {
+    color: #e58e09;
+  }
+  
+  .rating:not(:checked) > label:hover,
+  .rating:not(:checked) > label:hover ~ label {
+    color: #ff9e0b;
+  }
+  
+  .rating > input:checked ~ label {
+    color: #ffa723;
+  }
+  
+  
+  
+  

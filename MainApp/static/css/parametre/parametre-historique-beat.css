@@ -1,0 +1,321 @@
+body, html {
+    height: 100%; /* Ensure the body and html elements fill the entire viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to layout children */
+    flex-direction: column; /* Stack child elements vertically */
+    font-family: Roboto;
+}
+
+body {
+    background-color: #1e1e1e;
+    
+    
+}
+
+#TopBar {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #9c9b9b;
+}
+
+#logoSmall {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 1%;
+}
+
+.topBarClickable {
+    margin: 0 20px; /* space between clickable items */
+    color: aliceblue;
+    font-family: Roboto;
+    font-weight: 200;
+
+}
+
+.topBarClickable a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* customize as needed */
+}
+
+
+#miniTopBar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-right: 20px;
+    border-bottom: 1px solid #9c9b9b;
+    max-height: 5%;
+    margin-left: -20px;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 20px; /* Adjust the border radius as needed */
+    padding: 6% 12%; /* Adjust padding as needed */
+    font-size: 100%; /* Adjust font size as needed */
+    background-color: #323232; /* Background color */
+    color: #ffffff; /* Text color */
+    width: 80%; /* Set the width as needed */
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth color change */
+    margin-left: 16px;
+    
+}
+
+.search-bar::placeholder {
+    color: #ffffff; /* Placeholder color */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove focus outline */
+    background-color: #3c3c3c; /* Background color on focus */
+    color: #e7e7e7; /* Text color on focus */
+}
+
+#left {
+    display: flex;
+
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+}
+.menu-parametre {
+    
+    height: 100%; /* Fill the height of its parent container */
+    width: 17%; /* Adjust width as needed */
+    border-right: 1px solid #9c9b9b;
+    padding-left: 0%;
+    padding-right: 2%;
+    overflow-y:hidden; /* Enable vertical scrolling */
+    
+    
+    
+}
+.menu-parametre::-webkit-scrollbar {
+    display: none;
+    
+}
+
+.menu-parametre::-moz-scrollbar {
+    display: none;
+    
+}
+
+.menu-parametre-item:hover {
+    background-color: #282828ff ;
+}
+
+ 
+.menu-parametre-item {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white; 
+    background-color: transparent;
+    border: none ;
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-y:auto;    
+    
+
+}   
+
+.item1{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white;  
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border: none ;
+}
+/*#e66465, #9198e5*/
+    
+    
+.item-2 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color :red ; 
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}  
+
+.page {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    
+    flex-grow: 1;
+    background-color: blueviolet;
+    
+    
+    
+}
+.bas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 90% ; 
+      
+
+}
+.onglet{
+    width: 100%;
+    height: 90%;
+    background-color: #1e1e1e ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-top: 2%;
+    
+    
+}
+.recherche{
+    height: 7%;
+    width: 100%;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: -8%;
+    
+    
+}
+.but{
+    width: 10%;
+    margin-left:10%;
+    border-radius: 10px;
+    border: none;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    font-size: 15px;
+    color: white;
+
+    
+}
+.box{
+    height: 90%;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5%;
+    overflow-y: scroll;
+}
+
+.ligne{
+    width: 95%;
+    height: 20%;
+    margin-top: 2%;
+    
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+    
+}
+.contenu{
+    height: 100% ;
+    width : 10%;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border-radius: 10px;
+    background-image: url(c1.png);
+    background-size: 100%;
+    
+}  
+.contenu1{
+    height: 100% ;
+    width : 10%;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border-radius: 10px;
+    background-image: url(c2.jpg);
+    background-size: 100%;
+    
+} 
+.contenu2{
+    height: 100% ;
+    width : 10%;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border-radius: 10px;
+    background-image: url(c3.webp);
+    background-size: 100%;
+    
+} 
+.contenu3{
+    height: 100% ;
+    width : 10%;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border-radius: 10px;
+    background-image: url(c4.webp);
+    background-size: 100%;
+    
+} 
+.contenu4{
+    height: 100% ;
+    width : 10%;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border-radius: 10px;
+    background-image: url(c5.webp);
+    background-size: 100%;
+    
+} 
+.but:hover{
+    filter: brightness(0.7);
+}
+.contenu:hover{
+    filter: brightness(0.7);
+}
+.contenu1:hover{
+    filter: brightness(0.7);
+}
+.contenu2:hover{
+    filter: brightness(0.7);
+}
+.contenu3:hover{
+    filter: brightness(0.7);
+}
+.contenu4:hover{
+    filter: brightness(0.7);
+}
+.infos{
+    background: linear-gradient(90deg,darkviolet,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color:transparent;
+    white-space: nowrap;
+    font-size: 10px;    
+    
+    
+}
+.titre{
+    font-size: 8px;
+    margin-top: 10px;
+    color: #ffffff;
+;
+}

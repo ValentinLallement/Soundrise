@@ -1,0 +1,398 @@
+body, html {
+    height: 100%; /* Ensure the body and html elements fill the entire viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to layout children */
+    flex-direction: column; /* Stack child elements vertically */
+    font-family: Roboto;
+}
+
+body {
+    background-color: #1e1e1e;
+}
+
+#TopBar {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #9c9b9b;
+}
+
+#logoSmall {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 1%;
+}
+
+.topBarClickable {
+    margin: 0 20px; /* space between clickable items */
+    color: aliceblue;
+    font-family: Roboto;
+    font-weight: 200;
+
+}
+
+.topBarClickable a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* customize as needed */
+}
+
+
+#miniTopBar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    width: 100%;
+    margin-right: 20px;
+    border-bottom: 1px solid #9c9b9b;
+    max-height: 5%;
+    margin-left: 0px;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 20px; /* Adjust the border radius as needed */
+    padding: 6% 12%; /* Adjust padding as needed */
+    font-size: 100%; /* Adjust font size as needed */
+    background-color: #323232; /* Background color */
+    color: #ffffff; /* Text color */
+    width: 80%; /* Set the width as needed */
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth color change */
+    margin-left: 16px;
+}
+
+.search-bar::placeholder {
+    color: #ffffff; /* Placeholder color */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove focus outline */
+    background-color: #3c3c3c; /* Background color on focus */
+    color: #e7e7e7; /* Text color on focus */
+}
+
+#left {
+    display: flex;
+
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+}
+.menu-parametre {
+    
+    height: 100%; /* Fill the height of its parent container */
+    width: 17%; /* Adjust width as needed */
+    border-right: 1px solid #9c9b9b;
+    padding-left: 0%;
+    padding-right: 2%;
+    overflow-y:auto; /* Enable vertical scrolling */
+    
+    
+}
+#menu-parametre::-webkit-scrollbar {
+    display: none;
+}
+
+
+.menu-parametre-item:hover {
+    background-color: #444444ff;
+}
+
+ 
+
+.menu-parametre-item {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white; 
+    background-color: transparent;
+    border: none ;
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+
+}   
+
+    
+    
+.item-2 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : red; 
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}   
+  
+
+.onglet-compte{
+
+    margin-left: 20px;
+    width:  77%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.profil {
+    width: 20%;
+    height: 75%;
+    margin-left: 4%;
+    margin-top:  70px;
+    border-radius: 15px;
+    background-color : #333333ff;
+    
+    color:white;
+    text-align:center;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.page {
+    display: flex;
+    width: 100%;
+    min-height: 300px;
+    flex-grow: 1;
+    background-color: blueviolet;
+}
+.bas {
+    display: flex;
+    flex-direction: row;
+    
+    width: 100%;
+    height:100% ;
+
+}
+.logo {
+    width: 100px;
+    height:100px ;
+    background-color: white;
+    border-radius: 50%;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: 25%;
+
+    
+    
+}
+.bio {
+    margin-top: 20px;
+}
+.abonnement {
+    margin-top: 70px;
+    background: linear-gradient(90deg,darkviolet,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color:transparent;
+}
+.vente {
+    margin-top: 80px;
+    margin-bottom: 10px;
+    
+}
+.abonne{
+    margin-top: 10px;
+}
+.compte-reste{
+    
+    height: 100%;
+    width: 100%;       
+
+}
+.bio2{
+    margin-top: 10px;
+    margin-left: 27%;
+    color:white;
+}
+.espace{
+    height: 100px;
+    width: 400px;
+    margin-top:2px;
+    margin-left: 25%;
+    border-radius: 10px;
+    background-color: #444444ff;
+    color:white;
+    text-align: center;
+    font-size: 20px;
+    word-wrap:normal;
+
+}
+.question{
+    text-indent:41%;
+    height: 10px;
+    color:transparent;
+
+}
+
+.item1{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white;  
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#444444ff ;
+    border: none ;
+}
+.formulaire{
+    height: 100%;
+    width: 100%;
+    padding-left: 12%;
+    padding-top: 0%;
+    display: flex;
+    flex-direction: row;
+
+    
+}
+.form{
+    height: 60%;
+    width: 50%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    color: white;
+    
+    
+}
+
+
+
+.container {
+    display: flex;
+    width: 80%;
+    max-width: 900px;
+    background: #1e1E1E;
+    border-radius: 30px; /* Border radius for the container */
+    overflow: hidden;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+
+    background: linear-gradient(#1e1E1E, #1e1E1E) padding-box,
+                linear-gradient(to right, #3E6DB4, #B52781) border-box;
+    border-radius: 30px;
+    border: 8px solid transparent;
+        
+  }
+
+  select {
+    width: 100%;
+    padding: 15px;
+    margin: 10px 0;
+    border: none;
+    border-radius: 5px;
+    background: #1e1E1E;
+    color: #818181;
+    outline: none;
+    appearance: none; /* Remove default dropdown arrow */
+    -webkit-appearance: none; /* Remove default dropdown arrow in Safari */
+    -moz-appearance: none; /* Remove default dropdown arrow in Firefox */
+    padding-left: 0; /* Adjust padding as needed */
+}
+
+select option {
+    background: #1e1E1E;
+    color: #fff;
+    
+}
+
+select:focus {
+    border: none; /* Remove outline on focus */
+}
+
+/* Optional: add custom dropdown arrow */
+.countryf::after {
+    content: '';
+    position: absolute;
+    right: 15px;
+    pointer-events: none; /* Allows clicking on the select */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 12px; /* Adjust size */
+    height: 12px; /* Adjust size */
+    background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23dadada" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>') no-repeat center center;
+    background-size: contain; /* Make sure the SVG fits the container */
+}
+
+.form-container {
+    padding: 50px;
+    flex: 1;
+    background: #1e1E1E;
+    color: #fff;
+}
+
+h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    width: 200px;
+    height: 5px;
+    padding: 15px;
+    margin: 10px 0;
+    border-image:linear-gradient(to right, darkviolet,blue) 1 1 10;
+
+    border-radius: 5px;
+    background:none;
+    color: #fff;
+    outline: none;
+    margin-bottom: 2px;
+    margin-top: 2px;
+    padding-left: 10px;
+}
+
+
+
+
+
+.form-div {
+    display: flex;
+    position: relative; 
+    border-bottom: 1px solid #d9d9d9;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.exemple{
+    color:white;
+    margin-bottom:10px;
+}
+.perso{
+text-indent:-70px;
+color: white;
+}
+.form1{
+    width: 40%;
+}
+.form2{
+    width: 40%;
+    display: flex;
+    flex-direction:column ;
+    margin-left: 5%;
+    margin-top:3px;
+    color: white;
+}

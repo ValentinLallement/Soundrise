@@ -1,0 +1,539 @@
+body, html {
+    height: 100%; /* Ensure the body and html elements fill the entire viewport */
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    display: flex; /* Use flexbox to layout children */
+    flex-direction: column; /* Stack child elements vertically */
+    font-family: Roboto;
+}
+
+body {
+    background-color: #1e1e1e;
+    
+    
+}
+
+#TopBar {
+    display: flex;
+    align-items: center; /* vertically align items in the center */
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #9c9b9b;
+}
+
+#logoSmall {
+    margin-right: 10px; /* space between logo and the first clickable item */
+    width: 4%;
+    position: absolute;
+    left: 4%;
+    top: 1%;
+}
+
+.topBarClickable {
+    margin: 0 20px; /* space between clickable items */
+    color: aliceblue;
+    font-family: Roboto;
+    font-weight: 200;
+
+}
+
+.topBarClickable a {
+    text-decoration: none;
+    color: rgb(255, 255, 255); /* customize as needed */
+}
+
+
+#miniTopBar {
+    display: flex;
+    justify-content: space-between; /* Space items evenly */
+    color: aliceblue;
+    padding-top: 10px;
+    padding-bottom: 20px;
+    width: 100%;
+    margin-right: 20px;
+    border-bottom: 1px solid #9c9b9b;
+    max-height: 5%;
+    margin-left: -20px;
+}
+
+.search-bar {
+    border: none;
+    border-radius: 20px; /* Adjust the border radius as needed */
+    padding: 6% 12%; /* Adjust padding as needed */
+    font-size: 100%; /* Adjust font size as needed */
+    background-color: #323232; /* Background color */
+    color: #ffffff; /* Text color */
+    width: 80%; /* Set the width as needed */
+    transition: background-color 0.3s, color 0.3s; /* Add transition for smooth color change */
+    margin-left: 16px;
+    
+}
+
+.search-bar::placeholder {
+    color: #ffffff; /* Placeholder color */
+}
+
+.search-bar:focus {
+    outline: none; /* Remove focus outline */
+    background-color: #3c3c3c; /* Background color on focus */
+    color: #e7e7e7; /* Text color on focus */
+}
+
+#left {
+    display: flex;
+
+    justify-content: center; /* horizontally center items */
+    color: aliceblue;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
+}
+.menu-parametre {
+    
+    height: 100%; /* Fill the height of its parent container */
+    width: 17%; /* Adjust width as needed */
+    border-right: 1px solid #9c9b9b;
+    padding-left: 0%;
+    padding-right: 2%;
+    overflow-y:hidden; /* Enable vertical scrolling */
+    
+    
+    
+}
+.menu-parametre::-webkit-scrollbar {
+    display: none;
+    
+}
+
+.menu-parametre::-moz-scrollbar {
+    display: none;
+    
+}
+
+.menu-parametre-item:hover {
+    background-color: #282828ff ;
+}
+
+ 
+.menu-parametre-item {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white; 
+    background-color: transparent;
+    border: none ;
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    overflow-y:auto;    
+    
+
+}   
+
+.item1{
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color : white;  
+    margin-top: 0px;
+    font-size: 100%;
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(90deg,#e664d9, #2833ad);
+    border: none ;
+}
+/*#e66465, #9198e5*/
+    
+    
+.item-2 {
+    width: 100%;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color :red ; 
+    margin-left: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    
+}  
+
+.page {
+    display: flex;
+    width: 100%;
+    height: 70%;
+    
+    flex-grow: 1;
+    background-color: blueviolet;
+    
+    
+    
+}
+.bas {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height:90% ; 
+      
+
+}
+.onglet{
+    width: 100%;
+    height: 90%;
+    background-color: #1e1e1e ;
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+    margin-top: 2%;
+    
+    
+}
+.me{
+    height: 60%;
+    width: 70%;
+    background-color: #333333ff;
+    margin-left: 15%;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;  
+    font-size: 20px;
+    
+    
+}
+.abonnement{
+    height: 60%;
+    width: 90%;
+    
+    margin-left: 5%;
+    margin-top: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    
+}
+.abo1{
+    width: 31%;
+    background-color:#333333ff ;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+    
+}
+.abo2{
+    width: 31%;
+    background-color: #333333ff;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+   
+}
+
+.abo3{
+    width: 31%;
+    background-color: #333333ff;
+    text-align: center;
+    color: white;
+    font-size: 25px;
+}
+.actuel{
+    
+    width: 45%;
+    height: 100%;
+    color: white;
+    font-size: 30px;  
+    
+    
+}
+.paiement{
+    
+    width: 45%;
+    text-align: center;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color:white;
+    font-size: 30px;
+}
+.corp{
+    height: 90%;
+    background: linear-gradient(90deg,darkviolet,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color:transparent;
+    font-size: 25px;
+    margin-top: 2%;
+    
+    
+    
+}
+.data{
+    height: 5%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin-top: 5%;
+    margin-left: 5%;
+    margin-bottom: 10%;
+    white-space: nowrap;
+    color: white;
+    font-size: 15px;
+    
+}
+.variable{
+    margin-left:20% ;
+    font-size: 15px;
+    color:darkgrey;
+    
+}
+.variable1{
+    margin-left:10% ;
+    font-size: 15px;
+    color: darkgrey;
+    
+}
+.prix{
+    margin-left:70% ;
+    font-size: 15px;
+    color:rgb(34, 253, 0);
+}
+.name{
+    color: white;
+    margin-top: 17%;
+    font-size: 20px;
+}
+.cb{
+    margin-left: 10%;
+    margin-top: 2%;
+    background: linear-gradient(90deg,darkviolet,blue);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    color:transparent;
+    font-size: 25px;
+}
+.perso{
+    margin-top: 15%;
+    color: white;
+    font-size: 20px;
+}
+.private{
+    color: darkgrey;
+    font-size: 20px;
+}
+.titre{
+    
+    width: 100%;
+    text-indent: center;
+    height: 90%;
+    display: flex;
+    flex-direction: row;
+    
+    margin-top: 0%;
+}
+.border{
+    width: 1px;
+    height: 90%;
+    margin-top: 1%;
+    background-color: white;
+}
+.buy{
+    display: flex;
+    justify-content: space-around;
+    margin-top: 2%;
+    width: 90%;
+    margin-left: 5%;
+    
+}
+.choose{
+    height: 30px;
+    width: 80px;
+    background-color: transparent;
+    color: white;
+    border-image:linear-gradient(to right, darkviolet,blue) 1 1 10;
+}
+.choose:hover{
+    filter: brightness(1.7);
+    background :linear-gradient(to right, darkviolet,blue)
+}
+.me:hover{
+    filter: brightness(1.5);
+}
+.abo1:hover{
+    filter: brightness(1.5);
+    border-style: groove;
+    border-image:linear-gradient(to right, darkviolet,blue) 1 1 10;
+}
+.abo2:hover{
+    filter: brightness(1.5);
+    border-style: groove;
+    border-image:linear-gradient(to right, darkviolet,blue) 1 1 10;
+}
+.abo3:hover{
+    filter: brightness(1.5);
+    border-style: groove;
+    border-image:linear-gradient(to right, darkviolet,blue) 1 1 10;
+}
+.point{
+    text-align: left;
+    margin-top: 6%;
+    margin-left: 2%;
+    font-size: 20px;
+}
+.point1{
+    margin-top: 6%;
+    color : rgb(34, 253, 0);
+}
+.card {
+    overflow: hidden;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    padding: 1rem;
+    width: 14rem;
+    height: auto;
+    background-color: rgb(122, 48, 143);
+    background-image: radial-gradient(
+        circle at 0% 0%,
+        rgb(37, 7, 44) 15%,
+        rgba(0, 0, 0, 0) 75%
+      ),
+      radial-gradient(
+        circle at 100% 100%,
+        rgb(25, 2, 31, 0.9) 15%,
+        rgba(0, 0, 0, 0) 150%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(24, 8, 28, 0) 0%,
+        rgb(122, 48, 143) 50%,
+        rgba(24, 8, 28, 0) 100%
+      );
+    border-radius: 0.5rem;
+  }
+  
+  .card::before {
+    content: "";
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: rgb(122, 48, 143);
+    background-image: linear-gradient(
+      0deg,
+      rgba(118, 42, 180, 1) 0%,
+      rgb(199, 95, 228) 75%
+    );
+    border-radius: 9999px;
+    box-shadow: 0 1px 5px 3px rgb(199, 95, 228), 0 0 30px 5px rgb(199, 95, 228);
+  }
+  
+  .card .title {
+    font-size: 1rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .card .pricing {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: 600;
+  }
+  
+  .card .pricing .pricing-time,
+  .card .sub-title {
+    font-size: 0.75rem;
+    color: rgb(184, 132, 199);
+    font-weight: 500;
+  }
+  
+  .card .list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    font-size: 0.75rem;
+    color: white;
+    font-weight: 500;
+    list-style: none;
+  }
+  
+  .card .list .list-item .check {
+    margin-right: 0.25rem;
+    font-size: 1rem;
+    color: rgb(199, 95, 228);
+    font-weight: 900;
+  }
+  
+  .card .button {
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    margin-top: 0.5rem;
+    padding: 0.5rem 0.75rem;
+    width: 100%;
+    height: fit-content;
+    background-color: rgb(122, 48, 143);
+    font-size: 0.75rem;
+    color: white;
+    border: none;
+    border-radius: 0.5rem;
+    box-shadow: 0px 0px 2px 1px rgb(122, 48, 143);
+    transition: all 0.3s cubic-bezier(1, 0, 0, 1);
+  }
+  
+  .card .button .text-button {
+    position: relative;
+    z-index: 10;
+  }
+  
+  .card .button::before,
+  .card .button::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    transition: all 0.3s ease-in-out;
+  }
+  .card .button::before {
+    left: 0;
+    background-image: radial-gradient(
+      circle at 0% 45%,
+      rgba(16, 5, 36, 1) 19%,
+      rgba(16, 5, 36, 0.26) 46%,
+      rgba(16, 5, 36, 0) 100%
+    );
+  }
+  .card .button::after {
+    right: 0;
+    background-image: radial-gradient(
+      circle at 100% 45%,
+      rgba(16, 5, 36, 1) 19%,
+      rgba(16, 5, 36, 0.26) 46%,
+      rgba(16, 5, 36, 0) 100%
+    );
+  }
+  
+  .card .button:hover {
+    box-shadow: 0px 0px 20px 0 rgb(122, 48, 143);
+  }
+  
+  .card .button:hover::before,
+  .card .button:hover::after {
+    width: 0;
+    opacity: 0;
+  }
+  

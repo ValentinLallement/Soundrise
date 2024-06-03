@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="parametre-historique-artist.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+        <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+    </head>
+</head>
+<body>
+    <a href="{% url 'index' %}"><div id="logoSmall">
+        <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.68 40.55">
+            <defs>
+                <style>
+                    .cls-1 {
+                        fill: url(#Nouvelle_nuance_de_dégradé_1);
+                        stroke-width: 0px;
+                    }
+                </style>
+                <linearGradient id="Nouvelle_nuance_de_dégradé_1" data-name="Nouvelle nuance de dégradé 1" x1="0" y1="20.28" x2="63.68" y2="20.28" gradientUnits="userSpaceOnUse">
+                    <stop offset="0" stop-color="#c5589b"/>
+                    <stop offset="1" stop-color="#3e68af"/>
+                </linearGradient>
+            </defs>
+            <g id="Calque_1-2" data-name="Calque 1">
+                <path class="cls-1" d="M53.45,19.35c0-.06,0-.12,0-.18,0-6.56-4.87-11.88-10.87-11.88-1.37,0-2.68.29-3.88.8C36.6,3.32,31.96,0,26.56,0c-7.37,0-13.35,6.17-13.35,13.78,0,.75.07,1.48.19,2.2-.81-.22-1.66-.35-2.53-.35C4.87,15.63,0,21.21,0,28.09c0,6.4,4.21,11.66,9.62,12.37v.09h41.6c6.88,0,12.46-4.79,12.46-10.69,0-5.25-4.42-9.61-10.23-10.51Z"/>
+            </g>
+        </svg>
+    </div></a>
+    <div id="TopBar">
+        <div class="topBarClickable"><a href="{% url 'index' %}">Acceuil</a></div>
+        <div class="topBarClickable"><a href="explore.html">Parcourir</a></div>
+        <div class="topBarClickable"><a>Compte</a></div>
+        <div class="topBarClickable"><a>Fil d'actualité</a></div>
+        <div class="topBarClickable"><a href ="parametre-default.html">Paramètre</a> </a></div>
+    </div>  
+    
+    <div id="page">
+        <div id="miniTopBar">
+            <div class="topBarClickable"><input type="text" class="search-bar" placeholder="Search..."></div>
+            <div id="left">
+                <div class="topBarClickable"><a>2222222</a></div>
+                <div class="topBarClickable"><a>3333333</a></div>
+            </div>
+        </div>
+        
+        <div class = "bas">
+            <span class = "menu-parametre">
+                <div class="jsp" ><a></a>
+                    <button class="menu-parametre-item" type="button" onclick="basepa()" >Gestion du comtpe</button>
+                    
+                </div>
+                <div class="jsp"><a ></a>
+                    <button class="menu-parametre-item" type="button" onclick="baseta()">Tableau de bord</button>
+                    
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="menu-parametre-item type="button" onclick="basea()" >Activité</button>
+                    
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="item1" type="button" onclick="baseh()" >Historique</button>
+                    
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="menu-parametre-item" type="button"  onclick="basetr()">Transactions</button>
+                   
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="menu-parametre-item" type="button" onclick="baseo()" >Option d'abonnement</button>
+                    
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="menu-parametre-item" type="button" onclick="baser()" >Remboursement</button>
+                    
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="menu-parametre-item" type="button" onclick="basei()" >Interface</button>
+                    
+                </div>
+                <div class="jsp" ><a></a >
+                    <button class="menu-parametre-item" type="button" onclick="basep()" >Connexions</button>
+                    
+                </div>
+                <div class="jsp" ><a></a>
+                    <button class="menu-parametre-item" type="button" onclick="basec()" >Confidentialité</button>
+                    
+                </div>
+                <div class="jsp" ><a ></a>
+                    <button class="menu-parametre-item" type="button"  onclick="baseai()">Aide</button>
+                    
+                </div>
+                <div class="item-2" ><a >Déconnexion</a href = "deconnexion.html"></div>
+
+            </span>
+            <div class = "onglet">
+                <div class="recherche">
+                    <button class="item" onclick="basehb()" ><a href="parametre-historique-beat.html"></a>Beat</button>
+                    <button class="item" onclick="baseha()" ><a href="parametre-historique-artist.html"></a>Artist</button>
+                    <button class="item"onclick="basehr()" ><a href="parametre-historique-com.html"></a>Recherche</button>
+                </div>
+            
+                <div class="box">
+                    <div class="titre1">Aujourd'hui
+                        <div class="compte">
+                            <div class="logo1"></div>
+                            <div class="nom">Momo45</div>   
+                        </div>
+                        <div class="compte">
+                            <div class="logo"></div>
+                            <div class="nom">Beatmaker</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo2"></div>
+                            <div class="nom">Jeus8</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo4"></div>
+                            <div class="nom">Tyler_V</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo"></div>
+                            <div class="nom">lola_R</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo3"></div>
+                            <div class="nom">ynes</div>
+                        </div>
+                    </div>
+                    <div class="titre2">Cette semaine
+                        <div class="compte">
+                            <div class="logo4"></div>
+                            <div class="nom">MATHS17</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo3"></div>
+                            <div class="nom">LOic</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo"></div>
+                            <div class="nom">HYU</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo2"></div>
+                            <div class="nom">YOEL</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo1"></div>
+                            <div class="nom">JOJOprod</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo"></div>
+                            <div class="nom">GIms</div>
+                        </div>
+                    </div>
+                    <div class="titre3">Ce mois-ci
+                        <div class="compte">
+                            <div class="logo2"></div>
+                            <div class="nom">Desbois</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo3"></div>
+                            <div class="nom">Loic_65</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo4"></div>
+                            <div class="nom">ZERB</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo1"></div>
+                            <div class="nom">PAUL</div>
+                        </div>
+                        <div class="compte">
+                            <div class="logo"></div>
+                            <div class="nom">LOLO99</div>
+                        </div>
+                        <div class="compte">
+
+                        </div>
+                    </div>
+                </div>
+            </div>   
+                
+                            
+             
+                            
+                    
+
+                
+                
+                </div>
+            </div>
+        </div>
+    </div>
+
+    
+    
+    <script>
+        function basepa() {
+          window.location.href = "parametre-default.html";
+        }
+        function baseta() {
+          window.location.href = "parametre-tableau.html";
+        }
+        function basea() {
+          window.location.href = "parametre-activite.html";
+        }
+        function baseh() {
+          window.location.href = "parametre-historique.html";
+        }
+        function basetr() {
+          window.location.href = "parametre-transactions.html";
+        }
+        function baseo() {
+          window.location.href = "parametre-abonnement.html";
+        }
+        function baser() {
+          window.location.href = "parametre-remboursement.html";
+        }
+        function basei() {
+          window.location.href = "parametre-interface.html";
+        }
+        function basep() {
+          window.location.href = "parametre-connexions.html";
+        }
+        function basec() {
+          window.location.href = "parametre-confidentialite.html";
+        }
+        function baseai() {
+          window.location.href = "parametre-aide.html";
+        }
+        function basehb() {
+          window.location.href = "parametre-historique-beat.html";
+        }
+        function baseha() {
+          window.location.href = "parametre-historique-artist.html";
+        }
+        function basehr() {
+          window.location.href = "parametre-historique-recherche.html";
+        }
+        </script>
+</body>
