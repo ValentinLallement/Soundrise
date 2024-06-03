@@ -56,3 +56,8 @@ def upload_profile_picture(request):
 def logout_view(request):
     logout(request)
     return redirect('index')  # Redirect to the desired page after logout
+
+def setting_view(request, page):
+    print(page)
+    return render(request, 'MainApp/parametre/parametre_activite_com.html')
+
