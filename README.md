@@ -1,5 +1,6 @@
 # SoundRise
-![logo1](https://github.com/desboisGIT/Soundrise/assets/90150299/668c9315-c90c-4717-94cb-7e6550143d90)
+![Fichier 6](https://github.com/desboisGIT/Soundrise/assets/90150299/c9d38316-60a0-469c-8d04-adfcdef7dc95)
+
 
 Welcome to **SoundRise**! An innovative platform designed to connect musicians from around the globe. Create, share, and explore new music with our user-friendly interface.
 
@@ -9,6 +10,9 @@ Welcome to **SoundRise**! An innovative platform designed to connect musicians f
 - **Explore Music**: Discover music from artists worldwide.
 - **Artist Profiles**: Showcase your music and gain followers.
 - **Secure Login**: Password protection and data security.
+
+![login](https://github.com/desboisGIT/Soundrise/assets/90150299/e0e11c8a-03f5-4b50-bde6-58aa4bfd8d14)
+
 
 ## 🚀 Getting Started
 
