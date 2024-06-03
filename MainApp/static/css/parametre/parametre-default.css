@@ -14,37 +14,117 @@ body {
     
 }
 
-#TopBar {
+#profile-menu-button {
+    margin-right: 20px;
+  }
+  
+  .profile-menu-container {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .small-profile-picture {
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;  /* This makes the cursor a pointer when hovering over the image */
+  }
+  
+  .profile-menu {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+  }
+  
+  .profile-menu {
+  
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: #414141;  /* Change this to your desired background color */
+    border: 1px solid #4d4d4d;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    min-width: 160px;
+    border-radius: 8px;  /* Optional: Add border-radius for rounded corners */
+    padding: 10px 0;  /* Optional: Add padding to the menu */
+  }
+  
+  .profile-menu a {
+    font-family: Roboto;
+    color: aliceblue;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .profile-menu a:hover {
+    background-color: #3b3b3b;
+  }
+  
+  
+  
+  #loginButton {
+    padding: 15px;
+    width: 100%;
+    border: none;
+    border-radius: 30px;
+    color: #fff;
+    cursor: pointer;
+    background: linear-gradient(120deg, #3e6db4, rgb(181, 39, 129)); /* Blue to purple gradient */
+    background-size: 200% 200%;
+    transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -webkit-transition: all .25s ease-in-out;
+  }
+  
+  #loginButton:hover {
+    background-position: right center; /* Change the position of the gradient */
+  }
+  
+  
+  .small-profile-picture {
+    width: 3.5em; /* Set the width of the image */
+    height: 3.5em;
+    border-radius: 50%; /* Apply circular border-radius */
+    margin-right: 1%;
+  }
+  
+  #TopBar {
     display: flex;
     align-items: center; /* vertically align items in the center */
     justify-content: center; /* horizontally center items */
     color: aliceblue;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding-top: 1%;
+    padding-bottom: 1.5%;
     border-bottom: 1px solid #9c9b9b;
-}
-
-#logoSmall {
+  }
+  
+  .topBarClickable {
+    margin: 0 30px; /* space between clickable items */
+    color: aliceblue;
+    font-family: Roboto;
+    font-weight: 200;
+  
+  }
+  #logoSmall {
     margin-right: 10px; /* space between logo and the first clickable item */
     width: 4%;
     position: absolute;
     left: 4%;
-    top: 1%;
-}
-
-.topBarClickable {
-    margin: 0 20px; /* space between clickable items */
-    color: aliceblue;
-    font-family: Roboto;
-    font-weight: 200;
-    
-
-}
-
-.topBarClickable a {
+    top: 2%;
+    size:2px;
+  }
+  
+  .topBarClickable a {
     text-decoration: none;
     color: rgb(255, 255, 255); /* customize as needed */
-}
+  }
 
 
 #miniTopBar {
