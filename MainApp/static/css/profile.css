@@ -139,7 +139,9 @@ body {
 #SideMenu::-webkit-scrollbar {
     display: none;
 }
-
+.right {
+  min-width: 900px;
+}
 .profile-picture {
     margin-top: 20px;
     width: 200px; /* Set the width of the image */

@@ -83,19 +83,18 @@
                 <button type="submit" id="profileButton"><label for="profileButton" >Apply changes</label></button>
             </form>
         </div>
-
-        <div id="miniTopBar">
-            <h1> {{ user.username }}</h1>
+        <div id="right">
+            <div id="miniTopBar">
+                <h1> {{ user.username }}</h1>
+            </div>
+            <div id="miniTopBar">
+                <h1> {{ user.username }}</h1>
+            </div>
         </div>
-    <div>
+    </div>
 
-    <form action="{% url 'logout' %}" method="post">
-        {% csrf_token %}
-        <button type="submit" class="profileButton">Logout</button>
-    </form>
 
-    
-    
+
 
 </body>
 <script>

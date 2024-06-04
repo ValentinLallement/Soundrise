@@ -2,11 +2,11 @@
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
-from .models import CustomUser
+from .models import CustomUser, Beatmaker, Music
 
 class CustomUserAdmin(UserAdmin):
     model = CustomUser
-    list_display = ('username', 'email', 'full_name', 'country')
+    list_display = ('username', 'email', 'full_name', 'country', 'profile_picture')
     fieldsets = (
         (None, {'fields': ('username', 'password')}),
         (('Personal info'), {'fields': ('full_name', 'email', 'country')}),
@@ -20,4 +20,12 @@ class CustomUserAdmin(UserAdmin):
         }),
     )
 
+class BeatmakerAdmin(admin.ModelAdmin):
+    list_display = ('user', 'profile_description')
+
+class MusicAdmin(admin.ModelAdmin):
+    list_display = ('beatmaker', 'title', 'price', 'uploaded_at')
+
 admin.site.register(CustomUser, CustomUserAdmin)
+admin.site.register(Beatmaker, BeatmakerAdmin)
+admin.site.register(Music, MusicAdmin)
