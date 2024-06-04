@@ -68,7 +68,9 @@
     <div id="pagePool">
         <div id="SideMenu">
             {% if user.profile_picture %}
+            <div class="profile-picture-wrapper">
                 <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="profile-picture">
+            </div>
             {% endif %}
             
             <form action="{% url 'upload_profile_picture' %}" method="post" enctype="multipart/form-data">

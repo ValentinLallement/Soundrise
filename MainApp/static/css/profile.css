@@ -124,9 +124,12 @@ body {
   }
 
 #SideMenu {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Align items to the top */
     margin-top: 0px;
     height: 100%; /* Fill the height of its parent container */
-    width: 12%; /* Adjust width as needed */
+    width: fit-content; /* Adjust width as needed */
     border-right: 1px solid #9c9b9b;
     padding-left: 2%;
     padding-right: 2%;
@@ -142,6 +145,7 @@ body {
     width: 200px; /* Set the width of the image */
     height: 200px;
     border-radius: 50%; /* Apply circular border-radius */
+    margin-right: 40px;
 }
 
 .menu-item {
