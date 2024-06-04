@@ -60,14 +60,11 @@
       
       </div>
     
-    <div id="page">
-        <div id="miniTopBar">
-            <div class="topBarClickable"><input type="text" class="search-bar" placeholder="Search..."></div>
-            <div id="left">
-                <div class="topBarClickable"><a>2222222</a></div>
-                <div class="topBarClickable"><a>3333333</a></div>
-            </div>
-        </div>
+    <div id="page"style="
+    height: 90%;
+    margin-top: 30px;
+">
+
         
         <div class = "bas">
             <span class = "menu-parametre">
@@ -116,9 +113,10 @@
                     
                 </div>
                 <div class="item-2" ><a>Déconnexion</a href = "deconnexion.html"></div>
+                <div style="margin-top: 400px;"></div>
 
             </span>
-
+            <div class="rightSidePage" style="width: 100%; overflow: auto; margin-bottom: 30px;">
             {% if page == "default" %}
                 <div class = "onglet-parametre-default">
                     <div class="profil" ><a>Profil</a>
@@ -1368,7 +1366,7 @@
                 
                 </div>
             {% endif %}                      
-
+        </div>
 
     <script>
         function navigate(page) {

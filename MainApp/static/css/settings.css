@@ -5,6 +5,7 @@ body, html {
     display: flex; /* Use flexbox to layout children */
     flex-direction: column; /* Stack child elements vertically */
     font-family: Roboto;
+    overflow: hidden;
 }
 
 body {
@@ -176,14 +177,14 @@ html, body {
     padding-bottom: 1.5%;
 }
 .menu-parametre {
-    
-    height: 100%; /* Fill the height of its parent container */
+    padding-top: 0px;
+    height: 130%; /* Fill the height of its parent container */
     width: 17%; /* Adjust width as needed */
     border-right: 1px solid #9c9b9b;
     padding-left: 0%;
     padding-right: 2%;
-    overflow-y:hidden; /* Enable vertical scrolling */
-    
+    overflow-y:scroll;
+    overflow-x:hidden; /* Enable vertical scrolling */
     
     
 }
@@ -2344,6 +2345,7 @@ border: none;
     background-color:none;
     margin-left: 6.5%;
     margin-top: 3%;
+    padding-bottom: 3%;
    
     overflow-y: scroll;
     
