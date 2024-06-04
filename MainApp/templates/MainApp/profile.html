@@ -1,125 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <body>
     <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <title>Soundrise | Find the next beat for your song</title>
         {% load static %}
-        <link rel="stylesheet" type="text/css" href="{% static 'css/profile.css' %}">
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-        <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
-        <link rel="icon" href="{% static 'images/icon.ico' %}" type="image/x-icon"/>
+        <link
+          rel="stylesheet"
+          type="text/css"
+          href="{% static 'css/profile.css' %}"
+        />
+        <link
+          rel="stylesheet"
+          href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+          integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+          crossorigin="anonymous"
+        />
+        <link
+          href="https://fonts.googleapis.com/css?family=Roboto&display=swap"
+          rel="stylesheet"
+        />
+        <link
+          rel="icon"
+          href="{% static 'images/icon.ico' %}"
+          type="image/x-icon"
+        />
       </head>
-</head>
-    <a href="{% url 'index' %}"><div id="logoSmall">
-        <svg id="Calque_2" data-name="Calque 2" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 63.68 40.55">
-            <defs>
-                <style>
-                    .cls-1 {
-                        fill: url(#Nouvelle_nuance_de_dégradé_1);
-                        stroke-width: 0px;
-                    }
-                </style>
-                <linearGradient id="Nouvelle_nuance_de_dégradé_1" data-name="Nouvelle nuance de dégradé 1" x1="0" y1="20.28" x2="63.68" y2="20.28" gradientUnits="userSpaceOnUse">
-                    <stop offset="0" stop-color="#c5589b"/>
-                    <stop offset="1" stop-color="#3e68af"/>
-                </linearGradient>
-            </defs>
-            <g id="Calque_1-2" data-name="Calque 1">
-                <path class="cls-1" d="M53.45,19.35c0-.06,0-.12,0-.18,0-6.56-4.87-11.88-10.87-11.88-1.37,0-2.68.29-3.88.8C36.6,3.32,31.96,0,26.56,0c-7.37,0-13.35,6.17-13.35,13.78,0,.75.07,1.48.19,2.2-.81-.22-1.66-.35-2.53-.35C4.87,15.63,0,21.21,0,28.09c0,6.4,4.21,11.66,9.62,12.37v.09h41.6c6.88,0,12.46-4.79,12.46-10.69,0-5.25-4.42-9.61-10.23-10.51Z"/>
-            </g>
-        </svg>
+    </head>
+    <a href="{% url 'index' %}"
+      ><div id="logoSmall">
+        <svg
+          id="Calque_2"
+          data-name="Calque 2"
+          xmlns="http://www.w3.org/2000/svg"
+          xmlns:xlink="http://www.w3.org/1999/xlink"
+          viewBox="0 0 63.68 40.55"
+        >
+          <defs>
+            <style>
+              .cls-1 {
+                fill: url(#Nouvelle_nuance_de_dégradé_1);
+                stroke-width: 0px;
+              }
+            </style>
+            <linearGradient
+              id="Nouvelle_nuance_de_dégradé_1"
+              data-name="Nouvelle nuance de dégradé 1"
+              x1="0"
+              y1="20.28"
+              x2="63.68"
+              y2="20.28"
+              gradientUnits="userSpaceOnUse"
+            >
+              <stop offset="0" stop-color="#c5589b" />
+              <stop offset="1" stop-color="#3e68af" />
+            </linearGradient>
+          </defs>
+          <g id="Calque_1-2" data-name="Calque 1">
+            <path
+              class="cls-1"
+              d="M53.45,19.35c0-.06,0-.12,0-.18,0-6.56-4.87-11.88-10.87-11.88-1.37,0-2.68.29-3.88.8C36.6,3.32,31.96,0,26.56,0c-7.37,0-13.35,6.17-13.35,13.78,0,.75.07,1.48.19,2.2-.81-.22-1.66-.35-2.53-.35C4.87,15.63,0,21.21,0,28.09c0,6.4,4.21,11.66,9.62,12.37v.09h41.6c6.88,0,12.46-4.79,12.46-10.69,0-5.25-4.42-9.61-10.23-10.51Z"
+            />
+          </g>
+        </svg></div
+    ></a>
 
-        
-    </div></a>
-    
-  <div id="TopBar">
-    <div style="flex: 1;"></div>
-    <div class="topBarClickable"><a href="{% url 'index' %}">Acceuil</a></div>
-    <div class="topBarClickable"><a href="{% url 'explore' %}">Parcourir</a></div>
-    <div class="topBarClickable"><a href="{% url 'profile' %}">Compte</a></div>
-    <div class="topBarClickable"><a>Fil d'actualité</a></div>
-    <div class="topBarClickable"><a href ="{% url 'setting_view' 'parametre-default' %}">Paramètre</a></div>
+    <div id="TopBar">
+      <div style="flex: 1"></div>
+      <div class="topBarClickable"><a href="{% url 'index' %}">Acceuil</a></div>
+      <div class="topBarClickable">
+        <a href="{% url 'explore' %}">Parcourir</a>
+      </div>
+      <div class="topBarClickable">
+        <a href="{% url 'profile' %}">Compte</a>
+      </div>
+      <div class="topBarClickable"><a>Fil d'actualité</a></div>
+      <div class="topBarClickable">
+        <a href="{% url 'setting_view' 'parametre-default' %}">Paramètre</a>
+      </div>
 
-    <div style="flex: 1;"></div>
+      <div style="flex: 1"></div>
 
-    {% if request.user.is_authenticated %}
-        <div class="profile-menu-container">
-            {% if user.profile_picture %}
-                <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
-            {% else %}
-                <img src="{% static 'images/Fichier_2.png' %}" alt="Profile Picture" class="small-profile-picture" id="profile-menu-button">
-            {% endif %}
-            <div id="profile-menu" class="profile-menu">
-                <a href="{% url 'profile' %}">Profile</a>
-                <a href="{% url 'setting_view' 'parametre-default' %}">Settings</a>
-                <a href="{% url 'logout' %}">Logout</a>
-            </div>
+      {% if request.user.is_authenticated %}
+      <div class="profile-menu-container">
+        {% if user.profile_picture %}
+        <img
+          src="{{ user.profile_picture.url }}"
+          alt="Profile Picture"
+          class="small-profile-picture"
+          id="profile-menu-button"
+        />
+        {% else %}
+        <img
+          src="{% static 'images/Fichier_2.png' %}"
+          alt="Profile Picture"
+          class="small-profile-picture"
+          id="profile-menu-button"
+        />
+        {% endif %}
+        <div id="profile-menu" class="profile-menu">
+          <a href="{% url 'profile' %}">Profile</a>
+          <a href="{% url 'setting_view' 'parametre-default' %}">Settings</a>
+          <a href="{% url 'logout' %}">Logout</a>
         </div>
-    {% else %}
-        <div id="right-top" style="margin-right: 40px;">
-            <button id="loginButton"><a href="{% url 'loginAndRegister' %}" style="color: #fff; font-weight: 900; text-decoration: none;">SE CONNECTER</a></button>
-        </div>
-    {% endif %}
-  
-  </div>
-
-    <div id="pagePool">
-        <div id="SideMenu">
-            {% if user.profile_picture %}
-            <div class="profile-picture-wrapper">
-                <img src="{{ user.profile_picture.url }}" alt="Profile Picture" class="profile-picture">
-            </div>
-            {% endif %}
-            
-            <form action="{% url 'upload_profile_picture' %}" method="post" enctype="multipart/form-data">
-                {% csrf_token %}
-                <label for="file" class="custom-file-upload">
-                    Change picture
-                </label>
-                <input type="file" name="profile_picture" id="file" class="inputfile">
-
-                <button type="submit" id="profileButton"><label for="profileButton" >Apply changes</label></button>
-            </form>
-        </div>
-        <div id="right">
-            <div id="miniTopBar">
-                <h1> {{ user.username }}</h1>
-            </div>
-            <div id="miniTopBar">
-                <h1> {{ user.username }}</h1>
-            </div>
-        </div>
+      </div>
+      {% else %}
+      <div id="right-top" style="margin-right: 40px">
+        <button id="loginButton">
+          <a
+            href="{% url 'loginAndRegister' %}"
+            style="color: #fff; font-weight: 900; text-decoration: none"
+            >SE CONNECTER</a
+          >
+        </button>
+      </div>
+      {% endif %}
     </div>
 
+    <div id="pagePool">
+      <div id="SideMenu">
+        {% if user.profile_picture %}
+        <div class="profile-picture-wrapper">
+          <img
+            src="{{ user.profile_picture.url }}"
+            alt="Profile Picture"
+            class="profile-picture"
+          />
+        </div>
+        {% endif %}
 
+        <form
+          action="{% url 'upload_profile_picture' %}"
+          method="post"
+          enctype="multipart/form-data"
+        >
+          {% csrf_token %}
+          <label for="file" class="custom-file-upload"> Change picture </label>
+          <input
+            type="file"
+            name="profile_picture"
+            id="file"
+            class="inputfile"
+          />
 
+          <button type="submit" id="profileButton">
+            <label for="profileButton">Apply changes</label>
+          </button>
+        </form>
+      </div>
+      <div id="onTop">
+        <div id="miniTopBar">
+          <h1>{{ user.username }}</h1>
+        </div>
+        test
+      </div>
+    </div>
 
-</body>
-<script>
-    document.addEventListener("DOMContentLoaded", function() {
-        var menuItems = document.querySelectorAll('.menu-item');
+    <script>
+      document.addEventListener("DOMContentLoaded", function () {
+        var menuItems = document.querySelectorAll(".menu-item");
 
-        menuItems.forEach(function(item) {
-            var title = item.querySelector('.menu-title');
-            var dropdown = item.querySelector('.dropdown-content');
+        menuItems.forEach(function (item) {
+          var title = item.querySelector(".menu-title");
+          var dropdown = item.querySelector(".dropdown-content");
 
-            // Toggle dropdown content when clicking on the title
-            title.addEventListener('click', function() {
-                dropdown.classList.toggle('open'); // Toggle 'open' class
+          // Toggle dropdown content when clicking on the title
+          title.addEventListener("click", function () {
+            dropdown.classList.toggle("open"); // Toggle 'open' class
 
-                if (dropdown.style.maxHeight) {
-                    dropdown.style.maxHeight = null;
-                    item.style.paddingBottom = null; // Remove paddingBottom
-                    item.classList.remove('open-menu'); // Remove 'open-menu' class if dropdown is closed
-                } else {
-                    dropdown.style.maxHeight = dropdown.scrollHeight + "px";
-                    item.style.paddingBottom = "20px"; // Set paddingBottom
-                    item.classList.add('open-menu'); // Add 'open-menu' class if dropdown is open
-                }
-            });
+            if (dropdown.style.maxHeight) {
+              dropdown.style.maxHeight = null;
+              item.style.paddingBottom = null; // Remove paddingBottom
+              item.classList.remove("open-menu"); // Remove 'open-menu' class if dropdown is closed
+            } else {
+              dropdown.style.maxHeight = dropdown.scrollHeight + "px";
+              item.style.paddingBottom = "20px"; // Set paddingBottom
+              item.classList.add("open-menu"); // Add 'open-menu' class if dropdown is open
+            }
+          });
         });
-    });
-</script>
+      });
+    </script>
+  </body>
 </html>

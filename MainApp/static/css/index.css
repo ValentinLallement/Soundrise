@@ -4,11 +4,12 @@ body {
 body::-webkit-scrollbar {
   display: none;
 }
-html, body {
-    height: 100%;
-    margin: 0;
-    padding: 0;
-    background-color: #1e1e1e;
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
 }
 #profile-menu-button {
   margin-right: 20px;
@@ -23,7 +24,7 @@ html, body {
   border-radius: 50%;
   width: 40px;
   height: 40px;
-  cursor: pointer;  /* This makes the cursor a pointer when hovering over the image */
+  cursor: pointer; /* This makes the cursor a pointer when hovering over the image */
 }
 
 .profile-menu {
@@ -38,17 +39,16 @@ html, body {
 }
 
 .profile-menu {
-
   display: none;
   position: absolute;
   right: 0;
-  background-color: #414141;  /* Change this to your desired background color */
+  background-color: #414141; /* Change this to your desired background color */
   border: 1px solid #4d4d4d;
   box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
   z-index: 1;
   min-width: 160px;
-  border-radius: 8px;  /* Optional: Add border-radius for rounded corners */
-  padding: 10px 0;  /* Optional: Add padding to the menu */
+  border-radius: 8px; /* Optional: Add border-radius for rounded corners */
+  padding: 10px 0; /* Optional: Add padding to the menu */
 }
 
 .profile-menu a {
@@ -63,8 +63,6 @@ html, body {
   background-color: #3b3b3b;
 }
 
-
-
 #loginButton {
   padding: 15px;
   width: 100%;
@@ -72,17 +70,20 @@ html, body {
   border-radius: 30px;
   color: #fff;
   cursor: pointer;
-  background: linear-gradient(120deg, #3e6db4, rgb(181, 39, 129)); /* Blue to purple gradient */
+  background: linear-gradient(
+    120deg,
+    #3e6db4,
+    rgb(181, 39, 129)
+  ); /* Blue to purple gradient */
   background-size: 200% 200%;
-  transition: all .25s ease-in-out;
-  -moz-transition: all .25s ease-in-out;
-  -webkit-transition: all .25s ease-in-out;
+  transition: all 0.25s ease-in-out;
+  -moz-transition: all 0.25s ease-in-out;
+  -webkit-transition: all 0.25s ease-in-out;
 }
 
 #loginButton:hover {
   background-position: right center; /* Change the position of the gradient */
 }
-
 
 .small-profile-picture {
   width: 3.5em; /* Set the width of the image */
@@ -106,7 +107,6 @@ html, body {
   color: aliceblue;
   font-family: Roboto;
   font-weight: 200;
-
 }
 #logoSmall {
   margin-right: 10px; /* space between logo and the first clickable item */
@@ -114,7 +114,7 @@ html, body {
   position: absolute;
   left: 4%;
   top: 2%;
-  size:2px;
+  size: 2px;
 }
 
 .topBarClickable a {
@@ -122,28 +122,105 @@ html, body {
   color: rgb(255, 255, 255); /* customize as needed */
 }
 
-
 .cls-1 {
   stroke: url(#Orange_Jaune);
 }
 
-.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-6, .cls-7, .cls-8, .cls-9, .cls-10, .cls-11, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-27, .cls-28, .cls-29, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36 {
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-6,
+.cls-7,
+.cls-8,
+.cls-9,
+.cls-10,
+.cls-11,
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-16,
+.cls-17,
+.cls-18,
+.cls-19,
+.cls-20,
+.cls-21,
+.cls-22,
+.cls-23,
+.cls-24,
+.cls-25,
+.cls-26,
+.cls-27,
+.cls-28,
+.cls-29,
+.cls-30,
+.cls-31,
+.cls-32,
+.cls-33,
+.cls-34,
+.cls-35,
+.cls-36 {
   stroke-miterlimit: 10;
 }
 
-.cls-1, .cls-2, .cls-3, .cls-4, .cls-5, .cls-7, .cls-8, .cls-9, .cls-10, .cls-12, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-18, .cls-19, .cls-20, .cls-21, .cls-22, .cls-23, .cls-24, .cls-25, .cls-26, .cls-30, .cls-31, .cls-32, .cls-33, .cls-34, .cls-35, .cls-36 {
+.cls-1,
+.cls-2,
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-7,
+.cls-8,
+.cls-9,
+.cls-10,
+.cls-12,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-16,
+.cls-17,
+.cls-18,
+.cls-19,
+.cls-20,
+.cls-21,
+.cls-22,
+.cls-23,
+.cls-24,
+.cls-25,
+.cls-26,
+.cls-30,
+.cls-31,
+.cls-32,
+.cls-33,
+.cls-34,
+.cls-35,
+.cls-36 {
   fill: none;
 }
 
-.cls-1, .cls-2, .cls-7, .cls-34 {
+.cls-1,
+.cls-2,
+.cls-7,
+.cls-34 {
   stroke-width: 10px;
 }
 
-.cls-37, .cls-38, .cls-39, .cls-40, .cls-41, .cls-42, .cls-43, .cls-44, .cls-45 {
+.cls-37,
+.cls-38,
+.cls-39,
+.cls-40,
+.cls-41,
+.cls-42,
+.cls-43,
+.cls-44,
+.cls-45 {
   stroke-width: 0px;
 }
 
-.cls-37, .cls-46, .cls-47 {
+.cls-37,
+.cls-46,
+.cls-47 {
   fill: #eee;
 }
 
@@ -155,7 +232,22 @@ html, body {
   stroke: url(#Dégradé_sans_nom_128-2);
 }
 
-.cls-3, .cls-4, .cls-5, .cls-10, .cls-13, .cls-14, .cls-15, .cls-16, .cls-17, .cls-19, .cls-21, .cls-23, .cls-24, .cls-26, .cls-33, .cls-36 {
+.cls-3,
+.cls-4,
+.cls-5,
+.cls-10,
+.cls-13,
+.cls-14,
+.cls-15,
+.cls-16,
+.cls-17,
+.cls-19,
+.cls-21,
+.cls-23,
+.cls-24,
+.cls-26,
+.cls-33,
+.cls-36 {
   stroke-width: 3.54px;
 }
 
@@ -176,19 +268,28 @@ html, body {
   stroke-width: 1px;
 }
 
-.cls-6, .cls-48, .cls-46, .cls-47 {
+.cls-6,
+.cls-48,
+.cls-46,
+.cls-47 {
   font-weight: 700;
 }
 
-.cls-6, .cls-9, .cls-11, .cls-22 {
+.cls-6,
+.cls-9,
+.cls-11,
+.cls-22 {
   stroke: #fff;
 }
 
-.cls-6, .cls-49 {
+.cls-6,
+.cls-49 {
   font-size: 20px;
 }
 
-.cls-6, .cls-49, .cls-44 {
+.cls-6,
+.cls-49,
+.cls-44 {
   fill: #dadada;
 }
 
@@ -200,19 +301,27 @@ html, body {
   stroke: url(#Dégradé_sans_nom_66-2);
 }
 
-.cls-8, .cls-12, .cls-20, .cls-31, .cls-32 {
-  stroke-width: .82px;
+.cls-8,
+.cls-12,
+.cls-20,
+.cls-31,
+.cls-32 {
+  stroke-width: 0.82px;
 }
 
 .cls-48 {
   font-size: 21.99px;
 }
 
-.cls-48, .cls-46, .cls-47 {
-  font-family: YuGothicUI-Bold, 'Yu Gothic UI', Roboto-Bold, Roboto; 
+.cls-48,
+.cls-46,
+.cls-47 {
+  font-family: YuGothicUI-Bold, "Yu Gothic UI", Roboto-Bold, Roboto;
 }
 
-.cls-48, .cls-41, .cls-27 {
+.cls-48,
+.cls-41,
+.cls-27 {
   fill: #b2b2b2;
 }
 
@@ -224,7 +333,9 @@ html, body {
   letter-spacing: 0em;
 }
 
-.cls-9, .cls-11, .cls-18 {
+.cls-9,
+.cls-11,
+.cls-18 {
   stroke-width: 1px;
 }
 
@@ -288,7 +399,9 @@ html, body {
   letter-spacing: 0em;
 }
 
-.cls-18, .cls-28, .cls-30 {
+.cls-18,
+.cls-28,
+.cls-30 {
   stroke: #c6c6c6;
 }
 
@@ -312,12 +425,15 @@ html, body {
   font-size: 29px;
 }
 
-.cls-55, .cls-49 {
+.cls-55,
+.cls-49 {
   font-family: Roboto-Medium, Roboto;
   font-weight: 500;
 }
 
-.cls-55, .cls-56, .cls-57 {
+.cls-55,
+.cls-56,
+.cls-57 {
   fill: #fefefe;
 }
 
@@ -349,7 +465,9 @@ html, body {
   stroke-width: 2.3px;
 }
 
-.cls-25, .cls-27, .cls-35 {
+.cls-25,
+.cls-27,
+.cls-35 {
   stroke: #b2b2b2;
 }
 
@@ -364,7 +482,7 @@ html, body {
 }
 
 .cls-27 {
-  stroke-width: .58px;
+  stroke-width: 0.58px;
 }
 
 .cls-57 {
@@ -384,13 +502,13 @@ html, body {
 
 .cls-29 {
   fill: url(#Nouvelle_nuance_de_dégradé_1);
-  opacity: .14;
+  opacity: 0.14;
   stroke: url(#Nouvelle_nuance_de_dégradé_1-2);
   stroke-width: 1.18px;
 }
 
 .cls-30 {
-  stroke-width: .86px;
+  stroke-width: 0.86px;
 }
 
 .cls-61 {
@@ -422,7 +540,7 @@ html, body {
 }
 
 .cls-35 {
-  stroke-width: .83px;
+  stroke-width: 0.83px;
 }
 
 .cls-45 {
@@ -433,7 +551,6 @@ html, body {
   stroke: url(#Dégradé_sans_nom_128-7);
 }
 
-.hoverrer:hover{
+.hoverrer:hover {
   background-color: #575756;
 }
-
