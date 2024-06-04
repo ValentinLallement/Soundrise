@@ -35,7 +35,7 @@
         <div class="topBarClickable"><a href="{% url 'explore' %}">Parcourir</a></div>
         <div class="topBarClickable"><a href="{% url 'profile' %}">Compte</a></div>
         <div class="topBarClickable"><a>Fil d'actualité</a></div>
-        <div class="topBarClickable"><a href ="{% url 'setting_view' 'parametre-default' %}">Paramètre</a></div>
+        <div class="topBarClickable"><a href ="{% url 'setting_view' 'default' %}">Paramètre</a></div>
     
         <div style="flex: 1;"></div>
     
@@ -119,25 +119,26 @@
             <div class="rightSidePage" style="width: 100%; overflow: auto; margin-bottom: 30px;">
             {% if page == "default" %}
                 <div class = "onglet-parametre-default">
-                    <div class="profil" ><a>Profil</a>
-                        <button class ="logo-def"></button>
+                    <div class="onglet-def">
+                    <div class="profil-def" ><a>Profil</a>
+                        <img class ="logo-def" src="/static/images/parametre/c1.png"></img>
                         <div class ="nom"><a>Mr Meddy</a></div>
-                        <div class ="bio"><a>Je suis le meilleur beatmaker de la planète</a></div>
+                        <div class ="bio-def"><a>Je suis le meilleur beatmaker de la planète</a></div>
                         <div class ="abonnement-def"><a>Abonnement premium</a></div>
-                        <div class ="vente"><a>36 beats Vendus</a></div>
-                        <div class ="ecoute"><a>34k écoutes</a></div>
-                        <div class ="abonne"><a>103k abonnés</a></div>
+                        <div class ="vente-def"><a>36 beats Vendus</a></div>
+                        <div class ="ecoute-def"><a>34k écoutes</a></div>
+                        <div class ="abonne-def"><a>103k abonnés</a></div>
                     </div>
                     <div class ="compte-reste"><a></a>
-                        <div class = "bio2">Bio</div>
-                        <input type = "text" class = "espace" placeholder="Qui êtes vous ?"></a>
+                        <div class = "bio2-def">Bio</div>
+                        <input type = "text" class = "espace-def" placeholder="Qui êtes vous ?" class="exemple"></a>
                             <div class ="question-def">Qui êtes vous ?</div>
                         </input>
                             
                         <div class = "formulaire-def">
                             <div class = form1-def>
                                 <h1 class = "perso">Informations personnelles</h1> 
-                                <form class = "form" method="post" action = "form.php">  
+                                <form class = "form-def" method="post" action = "form.php">  
                                     <label for="nom-input">Nom</label>
                                     <input type="text" class = "exemple" placeholder ="Nom" name="nom-input"></input>
 
@@ -154,11 +155,60 @@
                                     <input type="password" class = "exemple"  placeholder ="******"></input>
 
                                     <label for="nom-input">Pays</label>
-                                    <input type="text" class = "exemple"  placeholder ="Choisisez un pays"></input>
+                                    <select type="text" class = "select-def"  placeholder ="Choisisez un pays">
+                                    <option value="default">Choisisez un pays</option>
+                                    <option value="sq">Albanien</option>
+                                    <option value="am">Arménien</option>
+                                    <option value="at">Allemand</option>
+                                    <option value="az">Azerbaïdjanais</option>
+                                    <option value="bs">Bosnien</option>
+                                    <option value="bg">Bulgare</option>
+                                    <option value="ca">Catalan</option>
+                                    <option value="hr">Croate</option>
+                                    <option value="cs">Tchèque</option>
+                                    <option value="da">Danois</option>
+                                    <option value="nl">Néerlandais</option>
+                                    <option value="en">Anglais</option>
+                                    <option value="et">Estonien</option>
+                                    <option value="fi">Finlandais</option>
+                                    <option value="fr">Français</option>
+                                    <option value="gl">Galicien</option>
+                                    <option value="ge">Géorgien</option>
+                                    <option value="de">Allemand</option>
+                                    <option value="el">Grec</option>
+                                    <option value="hu">Hongrois</option>
+                                    <option value="is">Islandais</option>
+                                    <option value="it">Italien</option>
+                                    <option value="kk">Kazakh</option>
+                                    <option value="kv">Komi</option>
+                                    <option value="ky">Kirghiz</option>
+                                    <option value="lv">Letton</option>
+                                    <option value="lt">Lituanien</option>
+                                    <option value="lb">Luxembourgeois</option>
+                                    <option value="mk">Macédonien</option>
+                                    <option value="mt">Maltais</option>
+                                    <option value="md">Moldave</option>
+                                    <option value="ms">Malais</option>
+                                    <option value="mn">Mongol</option>
+                                    <option value="me">Monténégrin</option>
+                                    <option value="no">Norvégien</option>
+                                    <option value="pl">Polonais</option>
+                                    <option value="pt">Portugais</option>
+                                    <option value="ro">Roumain</option>
+                                    <option value="ru">Russe</option>
+                                    <option value="sk">Slovaque</option>
+                                    <option value="sl">Slovène</option>
+                                    <option value="es">Espagnol</option>
+                                    <option value="sr">Serbe</option>
+                                    <option value="sv">Suédois</option>
+                                    <option value="tj">Tadjik</option>
+                                    <option value="tr">Turc</option>
+                                    <option value="uk">Ukrainien</option>
+                                </select>
                                 </form>
                             </div>
                             <div class = "form2-def">
-                                <h1 class = "perso">Informations professionelles</h1> 
+                                <h1 class = "perso2">Informations professionelles</h1> 
                                 <form class = "forme-def" method="post" action = "form.php"></form>
                                     <label for="nom-input">Nom d'artiste</label>
                                     <input type="text" class = "exemple"  placeholder ="Nom d'artiste"></input>
@@ -170,6 +220,7 @@
                             </div> 
                         </div>
                     </div> 
+                    </div>
                 </div>
             {% endif %}    
 
@@ -278,7 +329,7 @@
                         </div>
                         <div class="beatinfos">
                             <div class="li-tab">
-                                <button class="inf1"></button>  
+                                <img class="inf1" src="/static/images/parametre/c4.webp"></img>  
                                 <div class="inf2">
                                     <button class="Btn">
                                         <span class="leftContainer">
@@ -294,7 +345,7 @@
                                 
                             </div>
                             <div class="li-tab">
-                                <button class="inf1"></button>
+                                <img class="inf1" src="/static/images/parametre/c4.webp"></img>
                                 <div class="inf2">
                                     <button class="Btn">
                                         <span class="leftContainer">
@@ -309,7 +360,7 @@
                                 <div class="inf3">1.6k$</div>
                             </div>
                             <div class="li-tab">
-                                <button class="inf1"></button>
+                                <img class="inf1" src="/static/images/parametre/c4.webp"></img>
                                 <div class="inf2">
                                     <button class="Btn">
                                         <span class="leftContainer">
@@ -324,7 +375,7 @@
                                 <div class="inf3">200$</div>
                             </div>
                             <div class="li-tab">
-                                <button class="inf1"></button>
+                                <img class="inf1" src="/static/images/parametre/c4.webp"></img>
                                 <div class="inf2">
                                     <button class="Btn">
                                         <span class="leftContainer">
@@ -339,7 +390,7 @@
                                 <div class="inf3">3.4k$</div>
                             </div>
                             <div class="li-tab">
-                                <button class="inf1"></button>
+                                <img class="inf1" src="/static/images/parametre/c4.webp"></img>
                                 <div class="inf2">
                                     <button class="Btn">
                                         <span class="leftContainer">
@@ -363,23 +414,23 @@
 
             {% if page == "activite" %}
             <div class = "onglet-parametre-default">
-                <div class="recherche">
-                    <button class="but-act" onclick="basea()" ><a href="parametre-activite.html"></a>Likes</button>
-                    <button class="butact" onclick="baseaf()" ><a href="parametre-activite-fav.html"></a>Favoris</button>
-                    <button class="butact"onclick="baseac()" ><a href="parametre-activite-com.html"></a>Commentaires</button>
+                <div class="recherche-act">
+                    <button class="but-fav" onclick="navigate('activite')" ><a></a>Likes</button>
+                    <button class="but-fav" onclick="navigate('parametre-activite-fav')"></a>Favoris</button>
+                    <button class="but-fav"onclick="navigate('parametre-activite-com')" ><a href=></a>Commentaires</button>
                 </div>
                 <div class="box-bea">
                     <div class="ligne-act">
-                        <div class="contenu-act"></div>
+                        <img class="contenu-act" src="/static/images/parametre/c1.png"></img>
                         
-                        <div class="contenu2-act"></div>
+                        <img class="contenu2-act" src="/static/images/parametre/c3.webp"></img>
                         
-                        <div class="contenu1-act"></div>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
-                        <div class="contenu4-act"></div>
+                        <img class="contenu3-act" src="/static/images/parametre/c4.webp"></img>
                         
-                        <div class="contenu-act"></div>
-                        <div class="contenu-act"></div>
+                        <img class="contenu-act" src="/static/images/parametre/c1.png"></img>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
                         
                     </div>
@@ -406,16 +457,16 @@
 
                     <div class="ligne-act">
                         
-                        <div class="contenu1-act"></div>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
-                        <div class="contenu2-act"></div>
+                        <img class="contenu2-act" src="/static/images/parametre/c3.webp"></img>
                         
-                        <div class="contenu3-act"></div>
+                        <img class="contenu3-act" src="/static/images/parametre/c4.webp"></img>
                         
-                        <div class="contenu4-act"></div>
+                        <img class="contenu5-act" src="/static/images/parametre/c5.webp"></img>
                         
-                        <div class="contenu2-act"></div>
-                        <div class="contenu1-act"></div>
+                        <img class="contenu2-act" src="/static/images/parametre/c3.webp"></img>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
                         
                     </div>
@@ -442,16 +493,16 @@
 
                     </div>
                     <div class="ligne-act">
-                        <div class="contenu4-act"></div>
+                        <img class="contenu5-act" src="/static/images/parametre/c5.webp"></img>
                         
-                        <div class="contenu-act"></div>
+                        <img class="contenu-act" src="/static/images/parametre/c1.png"></img>
                         
-                        <div class="contenu2-act"></div>
+                        <img class="contenu2-act" src="/static/images/parametre/c3.webp"></img>
                         
-                        <div class="contenu1-act"></div>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
-                        <div class="contenu2-act"></div>
-                        <div class="contenu1-act"></div>
+                        <img class="contenu3-act" src="/static/images/parametre/c4.webp"></img>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
                         
                     </div>
@@ -476,16 +527,16 @@
                         </div>
                     </div>
                     <div class="ligne-act">
-                        <div class="contenu-act"></div>
+                        <img class="contenu-act" src="/static/images/parametre/c1.png"></img>
                         
-                        <div class="contenu2-act"></div>
-                        <div class="contenu1-act"></div>
+                        <img class="contenu2-act" src="/static/images/parametre/c3.webp"></img>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
-                        <div class="contenu3-act"></div>
+                        <img class="contenu3-act" src="/static/images/parametre/c4.webp"></img>
                         
-                        <div class="contenu4-act"></div>
+                        <img class="contenu5-act" src="/static/images/parametre/c5.webp"></img>
                         
-                        <div class="contenu1-act"></div>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
                     </div>
                     <div class="ligne-act">
@@ -510,16 +561,16 @@
                         </div>
                     </div>
                     <div class="ligne-act">
-                        <div class="contenu-act"></div>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
-                        <div class="contenu3-act"></div>
+                        <img class="contenu3-act" src="/static/images/parametre/c4.webp"></img>
                         
-                        <div class="contenu1-act"></div>
+                        <img class="contenu1-act" src="/static/images/parametre/c2.jpg"></img>
                         
-                        <div class="contenu4-act"></div>
+                        <img class="contenu4-act" src="/static/images/parametre/c5.webp"></img>
                         
-                        <div class="contenu-act"></div>
-                        <div class="contenu1-act"></div>
+                        <img class="contenu-act" src="/static/images/parametre/c1.png"></img>
+                        <img class="contenu2-act" src="/static/images/parametre/c3.webp"></img>
                         
                 
                     </div>
@@ -547,26 +598,495 @@
             </div>
             {% endif %}    
                 
+
+            {% if page == "parametre-activite-com" %}
+            <div class = "onglet-parametre-default">
+                <div class="recherche-com">
+                    <button class="but-fav" onclick="navigate('activite')" ><a></a>Likes</button>
+                    <button class="but-fav" onclick="navigate('parametre-activite-fav')"></a>Favoris</button>
+                    <button class="but-fav"onclick="navigate('parametre-activite-com')" ><a href=></a>Commentaires</button>
+                </div>
+                <div class="box-com">
+                    <div class="division-com"></div>
+                    <div class="contenu-com">
+                        <div class="catégorie-com">
+                            <div class="subject1-com">Commentaires</div>
+                            <div class="date1-com">Date</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Beat</div>
+                            <div class="date-com">19/06</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Song</div>
+                            <div class="date-com">19/06</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Song cool</div>
+                            <div class="date-com">19/07</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Beat rapide</div>
+                            <div class="date-com">19/07</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">hit</div>
+                            <div class="date-com">19/07</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">beat été</div>
+                            <div class="date-com">19/08</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">instru rap</div>
+                            <div class="date-com">19/08</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">hit été</div>
+                            <div class="date-com">19/09</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Maddy pain</div>
+                            <div class="date-com">19/09</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Desbois</div>
+                            <div class="date-com">19/09</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Beat</div>
+                            <div class="date-com">1909</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">beat long</div>
+                            <div class="date-com">19/10</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">110 bpm</div>
+                            <div class="date-com">19/10</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">beat pas cher</div>
+                            <div class="date-com">19/10</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">song remix</div>
+                            <div class="date-com">19/11</div>
+                        </div>
+                        <div class="ligne">
+                            <div class="subject">remix beat luis</div>
+                            <div class="date">19/11</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">David guetto</div>
+                            <div class="date-com">19/11</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">maitre gimnastique</div>
+                            <div class="date-com">19/12</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Johny allydays</div>
+                            <div class="date-com">19/12</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Robin caillou</div>
+                            <div class="date-com">19/12</div>
+                        </div>
+
+                        <div class="ligne-com">
+                            <div class="subject-com">The week</div>
+                            <div class="date-com">19/01</div>
+                        </div>
+                        <div class="ligne-com">
+                            <div class="subject-com">Jean jacques geul man</div>
+                            <div class="date-com">19/01</div>
+                        </div>
+                        
+                    </div>
+                    <div class="division-com"></div>
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% if page == "parametre-activite-fav" %}
+            <div class = "onglet-parametre-default">
+                <div class="recherche-fav">
+                    <button class="but-fav" onclick="navigate('activite')" ><a></a>Likes</button>
+                    <button class="but-fav" onclick="navigate('parametre-activite-fav')"></a>Favoris</button>
+                    <button class="but-fav"onclick="navigate('parametre-activite-com')" ><a href=></a>Commentaires</button>
+                </div>
+                <div class="for-title">
+                    <div class="title">Beat</div>
+                    <div class="title">Contenu</div>
+                </div>
+                <div class="fav">
+                    <div class="box-fav">
+                        <div class="ligne-fav">
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Rythm'n'Flow
+                                <div class="titre-fav">Rythme Urbain</div>
+                            </div>
+                            <div class="infos-fav">Bass Master
+                                <div class="titre-fav">Battement de Cœur</div>
+                            </div>
+                            <div class="infos-fav">Beat Crafter
+                                <div class="titre-fav">Impulsion Nocturne</div>
+                            </div>
+                            <div class="infos-fav">Sound Architect
+                                <div class="titre-fav">Vague Sonore</div>
+                            </div>
+                            <div class="infos-fav">Groove Alchemist
+                                <div class="titre-fav">Bassline Hypnotique</div>  
+                            </div>
+                            
+                        </div>
+
+                        <div class="ligne-fav">
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Melodic Maestro
+                                <div class="titre-fav">Sinfonie Urbaine</div>
+                            </div>
+                            <div class="infos-fav">SubSonic Sorcerer
+                                <div class="titre-fav">Cascade Rythmique</div>
+                            </div>
+                            <div class="infos-fav">Beat Surgeon
+                                <div class="titre-fav">Écho Hypnotique</div>
+                            </div>
+                            <div class="infos-fav">Audio Alchemist
+                                <div class="titre-fav">Pulsation Électronique</div>
+                            </div>
+                            <div class="infos-fav">Rhythm Wizard
+                                <div class="titre-fav">Vibes Cosmiques</div>
+                            </div>
+                            
+
+
+                        </div>
+                        <div class="ligne-fav">
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Sample Shaman
+                                <div class="titre-fav">Groove Futuriste</div>
+                            </div>
+                            <div class="infos-fav">Bassline Bandit
+                                <div class="titre-fav">Tempête Rythmique</div>
+                            </div>
+                            <div class="infos-fav">Drum Machine Messiah
+                                <div class="titre-fav">Fougue Urbaine</div>
+                            </div>
+                            <div class="infos-fav">Beat Conductor
+                                <div class="titre-fav">Évasion Sonore</div>
+                            </div>
+                            <div class="infos-fav">Sonic Sculptor
+                                <div class="titre-fav">Voyage Électronique</div>
+                            </div>
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                           
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Audio Weaver
+                                <div class="titre-fav">Fusion des Rythmes</div>
+                            </div>
+                            <div class="infos-fav">Groove Doctor
+                                <div class="titre-fav">Mélange Hypnotique</div>
+                            </div>
+                            <div class="infos-fav">Beat Scientist
+                                <div class="titre-fav">Explosion Sonore</div>
+                            </div>
+                            <div class="infos-fav">Sample Sensei
+                                <div class="titre-fav">Fréquence Énergétique</div>
+                            </div>
+                            <div class="infos-fav">Groove Doctor
+                                <div class="titre-fav">Sensation Rythmique</div>
+                            </div>
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                    
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Bassline Barbarian
+                                <div class="titre-fav">Vague Électrique</div>
+                            </div>
+                            <div class="infos-fav">Drum Machine Mystic
+                                <div class="titre-fav">Impulsion Urbaine</div>
+                            </div>
+                            <div class="infos-fav">Beat Maestro
+                                <div class="titre-fav">Rythme Hypnotique</div>
+                            </div>
+                            <div class="infos-fav">Sonic Engineer
+                                <div class="titre-fav">Écho Infini</div>
+                            </div>
+                            <div class="infos-fav">Audio Architect
+                                <div class="titre-fav">Symphonie Électronique</div>  
+                            </div>
+                            
+                        </div>
+                    </div>
+                    <div class="box-fav">
+                        <div class="ligne-fav">
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Rythm'n'Flow
+                                <div class="titre-fav">Rythme Urbain</div>
+                            </div>
+                            <div class="infos-fav">Bass Master
+                                <div class="titre-fav">Battement de Cœur</div>
+                            </div>
+                            <div class="infos-fav">Beat Crafter
+                                <div class="titre-fav">Impulsion Nocturne</div>
+                            </div>
+                            <div class="infos-fav">Sound Architect
+                                <div class="titre-fav">Vague Sonore</div>
+                            </div>
+                            <div class="infos-fav">Groove Alchemist
+                                <div class="titre-fav">Bassline Hypnotique</div>  
+                            </div>
+                            <div class="infos-fav">Groove Alchemist
+                                <div class="titre-fav">Bassline Hypnotique</div>  
+                            </div>
+                        </div>
+    
+                        <div class="ligne-fav">
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Melodic Maestro
+                                <div class="titre-fav">Sinfonie Urbaine</div>
+                            </div>
+                            <div class="infos-fav">SubSonic Sorcerer
+                                <div class="titre-fav">Cascade Rythmique</div>
+                            </div>
+                            <div class="infos-fav">Beat Surgeon
+                                <div class="titre-fav">Écho Hypnotique</div>
+                            </div>
+                            <div class="infos-fav">Audio Alchemist
+                                <div class="titre-fav">Pulsation Électronique</div>
+                            </div>
+                            <div class="infos-fav">Rhythm Wizard
+                                <div class="titre-fav">Vibes Cosmiques</div>
+                            </div>
+                            <div class="infos-fav">SubSonic Sorcerer
+                                <div class="titre-fav">Cascade Rythmique</div>
+                            </div>
+    
+    
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="contenu4-fav"></div>
+                            
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Sample Shaman
+                                <div class="titre-fav">Groove Futuriste</div>
+                            </div>
+                            <div class="infos-fav">Bassline Bandit
+                                <div class="titre-fav">Tempête Rythmique</div>
+                            </div>
+                            <div class="infos-fav">Drum Machine Messiah
+                                <div class="titre-fav">Fougue Urbaine</div>
+                            </div>
+                            <div class="infos-fav">Beat Conductor
+                                <div class="titre-fav">Évasion Sonore</div>
+                            </div>
+                            <div class="infos-fav">Sonic Sculptor
+                                <div class="titre-fav">Voyage Électronique</div>
+                            </div>
+                            <div class="infos-fav">Bassline Bandit
+                                <div class="titre-fav">Tempête Rythmique</div>
+                            </div>
+                        </div>
+                        <div class="ligne-fav">
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            
+                            <img  class="contenu2-fav" src="/static/images/parametre/c3.webp"></img>
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Audio Weaver
+                                <div class="titre-fav">Fusion des Rythmes</div>
+                            </div>
+                            <div class="infos-fav">Groove Doctor
+                                <div class="titre-fav">Mélange Hypnotique</div>
+                            </div>
+                            <div class="infos-fav">Beat Scientist
+                                <div class="titre-fav">Explosion Sonore</div>
+                            </div>
+                            <div class="infos-fav">Sample Sensei
+                                <div class="titre-fav">Fréquence Énergétique</div>
+                            </div>
+                            <div class="infos-fav">Groove Doctor
+                                <div class="titre-fav">Sensation Rythmique</div>
+                            </div>
+                            
+                            <div class="infos-fav">Beat Scientist
+                                <div class="titre-fav">Explosion Sonore</div>
+                            </div>
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="contenu-fav"></div>
+                            
+                            <img  class="contenu3-fav" src="/static/images/parametre/c4.webp"></img>
+                            
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                            <img  class="contenu4-fav" src="/static/images/parametre/c5.webp"></img>
+                            
+                            <img  class="contenu-fav" src="/static/images/parametre/c1.png"></img>
+                            <img  class="contenu1-fav" src="/static/images/parametre/c2.jpg"></img>
+                            
+                       
+                        </div>
+                        <div class="ligne-fav">
+                            <div class="infos-fav">Bassline Barbarian
+                                <div class="titre-fav">Vague Électrique</div>
+                            </div>
+                            <div class="infos-fav">Drum Machine Mystic
+                                <div class="titre-fav">Impulsion Urbaine</div>
+                            </div>
+                            <div class="infos-fav">Beat Maestro
+                                <div class="titre-fav">Rythme Hypnotique</div>
+                            </div>
+                            <div class="infos-fav">Sonic Engineer
+                                <div class="titre-fav">Écho Infini</div>
+                            </div>
+                            <div class="infos-fav">Audio Architect
+                                <div class="titre-fav">Symphonie Électronique</div>  
+                            </div>
+                            <div class="infos-fav">Beat Maestro
+                                <div class="titre-fav">Rythme Hypnotique</div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+            {% endif %}
+
             {% if page == "historique-beat" %}
             <div class = "onglet-parametre-default">
-                <div class="recherche">
-                    <button class="but-bea" onclick="basehb()" ><a href="{% url 'setting_view' 'parametre-historique-beat' %}"></a>Beat</button>
-                    <button class="but-bea" onclick="baseha()" ><a href="{% url 'setting_view' 'parametre-historique-artist' %}"></a>Artist</button>
-                    <button class="but-bea"onclick="basehr()" ><a href="{% url 'setting_view' 'parametre-historique-recherche' %}"></a>Recherche</button>
+                <div class="recherche-act">
+                    <button class="but-fav" onclick="navigate('historique-beat')" ><a></a>Beat</button>
+                    <button class="but-fav" onclick="navigate('parametre-historique-artist')"></a>Artiste</button>
+                    <button class="but-fav"onclick="navigate('parametre-historique-recherche')" ><a href=></a>Recherche</button>
                 </div>
                 <div class="box-bea">
                   <div class="ligne-bea">
-                      <div class="contenu-bea"></div>
+                      <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
                       
-                      <div class="contenu2-bea"></div>
+                      <img class="contenu2-bea" src="/static/images/parametre/c3.webp"></img>
                       
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
-                      <div class="contenu4-bea"></div>
+                      <img class="contenu4-bea" src="/static/images/parametre/c5.webp"></img>
                       
-                      <div class="contenu-bea"></div>
-                      <div class="contenu-bea"></div>
-                      
+                      <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
+                      <img class="contenu3-bea" src="/static/images/parametre/c4.webp"></img>
                       
                   </div>
                   <div class="ligne-bea">
@@ -592,16 +1112,16 @@
 
                   <div class="ligne-bea">
                       
-                      <div class="contenu1-bea"></div>
+                    <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
-                      <div class="contenu2-bea"></div>
+                    <img class="contenu2-bea" src="/static/images/parametre/c3.webp"></img>
                       
-                      <div class="contenu3-bea"></div>
+                    <img class="contenu3-bea" src="/static/images/parametre/c4.webp"></img>
                       
-                      <div class="contenu4-bea"></div>
+                    <img class="contenu4-bea" src="/static/images/parametre/c5.webp"></img>
                       
-                      <div class="contenu2-bea"></div>
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
                       
                   </div>
@@ -610,7 +1130,7 @@
                           <div class="titre-bea">Sinfonie Urbaine</div>
                       </div>
                       <div class="infos-bea">SubSonic Sorcerer
-                          <div class="titrev">Cascade Rythmique</div>
+                          <div class="titre-bea">Cascade Rythmique</div>
                       </div>
                       <div class="infos-bea">Beat Surgeon
                           <div class="titre-bea">Écho Hypnotique</div>
@@ -628,16 +1148,16 @@
 
                   </div>
                   <div class="ligne-bea">
-                      <div class="contenu4-bea"></div>
+                    <img class="contenu4-bea" src="/static/images/parametre/c5.webp"></img>
                       
-                      <div class="contenu-bea"></div>
+                      <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
                       
-                      <div class="contenu2-bea"></div>
+                      <img class="contenu2-bea" src="/static/images/parametre/c3.webp"></img>
                       
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
-                      <div class="contenu2-bea"></div>
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu2-bea" src="/static/images/parametre/c3.webp"></img>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
                       
                   </div>
@@ -662,16 +1182,16 @@
                       </div>
                   </div>
                   <div class="ligne-bea">
-                      <div class="contenu-bea"></div>
+                    <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
                       
-                      <div class="contenu2-bea"></div>
-                      <div class="contenu1-bea"></div>
+                    <img class="contenu2-bea" src="/static/images/parametre/c3.webp"></img>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
-                      <div class="contenu3-bea"></div>
+                      <img class="contenu3-bea" src="/static/images/parametre/c4.webp"></img>
                       
-                      <div class="contenu4-bea"></div>
+                      <img class="contenu4-bea" src="/static/images/parametre/c5.webp"></img>
                       
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
                   </div>
                   <div class="ligne-bea">
@@ -696,16 +1216,16 @@
                       </div>
                   </div>
                   <div class="ligne-bea">
-                      <div class="contenu-bea"></div>
+                    <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
                       
-                      <div class="contenu3-bea"></div>
+                    <img class="contenu3-bea" src="/static/images/parametre/c4.webp"></img>
                       
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
-                      <div class="contenu4-bea"></div>
+                      <img class="contenu4-bea" src="/static/images/parametre/c5.webp"></img>
                       
-                      <div class="contenu-bea"></div>
-                      <div class="contenu1-bea"></div>
+                      <img class="contenu-bea" src="/static/images/parametre/c1.png"></img>
+                      <img class="contenu1-bea" src="/static/images/parametre/c2.jpg"></img>
                       
                  
                   </div>
@@ -732,78 +1252,282 @@
               </div>
                 
             </div>
-            {% endif %}    
+            {% endif %}   
+            
+            {% if page == "parametre-historique-artist" %}
+            <div class = "onglet-parametre-default">
+                
+                <div class="recherche-art">
+                    <button class="item-art" onclick="navigate('historique-beat')" ><a></a>Beat</button>
+                    <button class="item-art" onclick="navigate('parametre-historique-artist')"></a>Artiste</button>
+                    <button class="item-art"onclick="navigate('parametre-historique-recherche')" ><a></a>Recherche</button>
+                </div>
+            
+                <div class="box-art">
+                    <div class="titre1-art">Aujourd'hui
+                        <div class="compte-art">
+                            <img class="logo1-art" src="/static/images/parametre/C1.png"></img>
+                            <div class="nom-art">Momo45</div>   
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo-art" src="/static/images/parametre/C2.jpg"></img>
+                            <div class="nom-art">Beatmaker</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo2-art" src="/static/images/parametre/C3.webp"></img>
+                            <div class="nom-art">Jeus8</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo4-art" src="/static/images/parametre/C5.webp"></img>
+                            <div class="nom-art">Tyler_V</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo-art" src="/static/images/parametre/C2.jpg"></img>
+                            <div class="nom-art">lola_R</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo3-art" src="/static/images/parametre/C4.webp"></img>
+                            <div class="nom-art">ynes</div>
+                        </div>
+                    </div>
+                    <div class="titre2-art">Cette semaine
+                        <div class="compte-art">
+                            <img class="logo4-art" src="/static/images/parametre/C5.webp"></img>
+                            <div class="nom-art">MATHS17</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo3-art" src="/static/images/parametre/C4.webp"></img>
+                            <div class="nom-rart">LOic</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo-art" src="/static/images/parametre/C2.jpg"></img>
+                            <div class="nom-art">HYU</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo2-art" src="/static/images/parametre/C3.webp"></img>
+                            <div class="nom-art">YOEL</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo1-art" src="/static/images/parametre/C1.png"></img>
+                            <div class="nom-art">JOJOprod</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo-art" src="/static/images/parametre/C2.jpg"></img>
+                            <div class="nom-art">GIms</div>
+                        </div>
+                    </div>
+                    <div class="titre3-art">Ce mois-ci
+                        <div class="compte-art">
+                            <img class="logo2-art" src="/static/images/parametre/C3.webp"></img>
+                            <div class="nom-art">Desbois</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo3-art" src="/static/images/parametre/C4.webp"></img>
+                            <div class="nom-art">Loic_65</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo4-art" src="/static/images/parametre/C5.webp"></img>
+                            <div class="nom-art">ZERB</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo1-art" src="/static/images/parametre/C1.png"></img>
+                            <div class="nom-art">PAUL</div>
+                        </div>
+                        <div class="compte-art">
+                            <img class="logo-art" src="/static/images/parametre/C2.jpg"></img>
+                            <div class="nom-art">LOLO99</div>
+                        </div>
+                        <div class="compte-art">
 
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            {% endif %} 
+
+            {% if page == "parametre-historique-recherche" %}
+            <div class = "onglet-parametre-default">
+                <div class="recherche-rec">
+                    <button class="but-rec" onclick="basehb()" ><a href="parametre-historique.html"></a>Beat</button>
+                    <button class="but-rec" onclick="baseha()" ><a href="parametre-historique-fav.html"></a>Artist</button>
+                    <button class="but-rec"onclick="basehr()" ><a href="parametre-historique-recherche.html"></a>Recherche</button>
+                </div>
+                <div class="box-rec">
+                    <div class="division-rec"></div>
+                    <div class="contenu-rec">
+                        <div class="catégorie-rec">
+                            <div class="subject1-rec">Recherche</div>
+                            <div class="date1-rec">Date</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Beat</div>
+                            <div class="date-rec">19/06</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Song</div>
+                            <div class="date-rec">19/06</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Song cool</div>
+                            <div class="date-rec">19/07</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Beat rapide</div>
+                            <div class="date-rec">19/07</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">hit</div>
+                            <div class="date-rec">19/07</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">beat été</div>
+                            <div class="date-rec">19/08</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">instru rap</div>
+                            <div class="date-rec">19/08</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">hit été</div>
+                            <div class="date-rec">19/09</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Maddy pain</div>
+                            <div class="date-rec">19/09</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Desbois</div>
+                            <div class="date-rec">19/09</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Beat</div>
+                            <div class="date-rec">1909</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">beat long</div>
+                            <div class="date-rec">19/10</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">110 bpm</div>
+                            <div class="date-rec">19/10</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">beat pas cher</div>
+                            <div class="date-rec">19/10</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">song remix</div>
+                            <div class="date-rec">19/11</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">remix beat luis</div>
+                            <div class="date-rec">19/11</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">David guetto</div>
+                            <div class="date-rec">19/11</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">maitre gimnastique</div>
+                            <div class="date-rec">19/12</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Johny allydays</div>
+                            <div class="date-rec">19/12</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Robin caillou</div>
+                            <div class="date-rec">19/12</div>
+                        </div>
+
+                        <div class="ligne-rec">
+                            <div class="subject-rec">The week</div>
+                            <div class="date-rec">19/01</div>
+                        </div>
+                        <div class="ligne-rec">
+                            <div class="subject-rec">Jean jacques geul man</div>
+                            <div class="date-rec">19/01</div>
+                        </div>
+                        
+                    </div>
+                    <div class="division-rec"></div>
+                </div>
+            </div>
+            {% endif %}
             {% if page == "transactions" %}
             <div class = "onglet-parametre-default">
-                <h2 class="title-tr">Mes cartes</h2>
-                <div class="cartes">
-                    
-                    <div class="cb-tr"></div>
-                    <div class="cb-tr"></div>
-                    <button>
-                        <span>
-                          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg> Create
-                        </span>
-                    </button>
-                    
-                </div>
-                <div class="box-tr">Historique des transactions
-                    <div class="tri-tr">
-                        <div class="tr1-tr">Id</div>
-                        <div class="tr2-tr">date</div>
-                        <div class="tr3-tr">Catégorie</div>
-                        <div class="tr4-tr">Montant</div>
-                    </div>
-                    <div class="ligne-tr">
+                <div class="onglet-tr">
+                    <h2 class="title-tr">Mes cartes</h2>
+                    <div class="cartes">
                         
-                        <div class="contenu-tr">38</div>
-                        <div class="contenu-tr">10/12</div>
-                        <div class="contenu-tr">Beat</div>
-                        <div class="contenu1-tr">5,99$</div>
-                        
-                    </div>
-                    <div class="ligne-tr">
-                        <div class="contenu-tr">67</div>
-                        <div class="contenu-tr">22/07</div>
-                        <div class="contenu-tr">Abonnement</div>
-                        <div class="contenu1-tr">9,99$</div>
-                        
-                    </div>
-                    <div class="ligne-tr">
-                        
-                        <div class="contenu-tr">99</div>
-                        <div class="contenu-tr">13/06</div>
-                        <div class="contenu-tr">Retrait</div>
-                        <div class="contenu1-tr">20$</div>
-                        
-                    </div>
-                    <div class="ligne-tr">
-                        
-                        <div class="contenu-tr">55</div>
-                        <div class="contenu-tr">31/05</div>
-                        <div class="contenu-tr">Dépot</div>
-                        <div class="contenu1-tr">20$</div>
-                        
-                    </div>
-                    <div class="ligne-tr">
-                        
-                        <div class="contenu-tr">40</div>
-                        <div class="contenu-tr">19/09</div>
-                        <div class="contenu-tr">Beat</div>
-                        <div class="contenu1-tr">10$</div>
-                        
-                    </div>
-                </div>
-                <div class="end">
-                    <div class="button-tr" data-tooltip="Size: 20Mb">
-                        <div class="button-wrapper">
-                          <div class="text-tr">Download</div>
-                            <span class="icon">
-                              <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                        <img class="test2" src="/static/images/parametre/cb.png"></img>
+                        <img class="test2" src="/static/images/parametre/cb.png"></img>
+                        <button class="add-tr">
+                            <span class="span-tr ">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path fill="none" d="M0 0h24v24H0z"></path><path fill="currentColor" d="M11 11V5h2v6h6v2h-6v6h-2v-6H5v-2z"></path></svg> Create
                             </span>
-                          </div>
+                        </button>
+                        
+                    </div>
+                    <div class="box-tr">Historique des transactions
+                        <div class="tri-tr">
+                            <div class="tr1-tr">Id</div>
+                            <div class="tr2-tr">date</div>
+                            <div class="tr3-tr">Catégorie</div>
+                            <div class="tr4-tr">Montant</div>
                         </div>
+                        
+                        <div class="test">
+                            
+                            <div class="contenu-tr">38</div>
+                            <div class="contenu-tr">10/12</div>
+                            <div class="contenu-tr">Beat</div>
+                            <div class="contenu1-tr">5,99$</div>
+                            
+                        </div>
+                        <div class="test">
+                            <div class="contenu-tr">67</div>
+                            <div class="contenu-tr">22/07</div>
+                            <div class="contenu-tr">Abonnement</div>
+                            <div class="contenu1-tr">9,99$</div>
+                            
+                        </div>
+                        <div class="test">
+                            
+                            <div class="contenu-tr">99</div>
+                            <div class="contenu-tr">13/06</div>
+                            <div class="contenu-tr">Retrait</div>
+                            <div class="contenu1-tr">20$</div>
+                            
+                        </div>
+                        <div class="test">
+                            
+                            <div class="contenu-tr">55</div>
+                            <div class="contenu-tr">31/05</div>
+                            <div class="contenu-tr">Dépot</div>
+                            <div class="contenu1-tr">20$</div>
+                            
+                        </div>
+                        <div class="test">
+                            
+                            <div class="contenu-tr">40</div>
+                            <div class="contenu-tr">19/09</div>
+                            <div class="contenu-tr">Beat</div>
+                            <div class="contenu1-tr">10$</div>
+                            
+                        </div>
+                    </div>
+                    <div class="end">
+                        <div class="button-tr" data-tooltip="Size: 20Mb">
+                            <div class="button-wrapper">
+                            <div class="text-tr">Download</div>
+                                <span class="icon-tr">
+                                <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" width="2em" height="2em" preserveAspectRatio="xMidYMid meet" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15V3m0 12l-4-4m4 4l4-4M2 17l.621 2.485A2 2 0 0 0 4.561 21h14.878a2 2 0 0 0 1.94-1.515L22 17"></path></svg>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
             {% endif %}   
@@ -913,7 +1637,7 @@
             
             {% if page == "interface" %}
             <div class = "onglet-parametre-default">
-                <div class=onglet-int >
+                <div class="onglet-int" >
                 
                     <div class="gauche">
                         <div class="titre-int">Affichage</div>
@@ -929,7 +1653,7 @@
                                 
                             </div>
                         </div>
-                        <div class="entier">
+                        <div class="entier2">
                             <div class="titre3-int">Charger les médias en faible résolution</div>
                             <div class="icone-int">
                                 <label class="toggle-switch">
@@ -1029,33 +1753,33 @@
                         <div class="ligne-con"></div>
                         <div class="contenu-con">
                             <div class="box2-con">
-                                <div class="logo1-con"></div>
+                                <img class="logo1-con" src="/static/images/parametre/l1.png"></img>
                                 <div class="marq">Deezer</div>
                                 <button class="connect">Se connecter</button>
                             </div>
                             <div class="box2-con">
-                                <div class="logo2-con"></div>
+                                <img class="logo2-con" src="/static/images/parametre/l2.png"></img>
                                 <div class="marq">Spotify</div>
                                 <button class="connect">Se connecter</button>
                             
                             </div>
                             <div class="box2-con">
                                
-                                <div class="logo3-con"></div>
+                                <img class="logo3-con" src="/static/images/parametre/l3.png"></img>
                                 <div class="marq">Soundcloud</div>
                                 <button class="connect">Se connecter</button> 
                                 
                             </div>
                             <div class="box2-con">
                                 
-                                <div class="logo4-con"></div>
+                                <img class="logo4-con" src="/static/images/parametre/l4.png"></img>
                                 <div class="marq4">Youtube</div>
                                 <button class="connect">Se connecter</button> 
                                 
                             </div>
                             <div class="box2-con">
                                 
-                                <div class="logo5-con"></div>
+                                <img class="logo5-con" src="/static/images/parametre/l5.png"></img>
                                 <div class="marq5">Fl studio</div>
                                 <button class="connect">Se connecter</button> 
                                 
@@ -1307,52 +2031,54 @@
              
             {% if page == "aide" %}
             <div class = "onglet-parametre-default">
-                <div class="partie">
-                    <div class="titre2-aid">Question fréquentes</div>
-                    <div class="box-aid">
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
-                        <div class="question-aid">Comment ?</div>
+                <div class=onglet-int >
+                    <div class="partie">
+                        <div class="titre2-aid">Question fréquentes</div>
+                        <div class="box-aid">
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
+                            <div class="question-aid">Comment ?</div>
 
+                        </div>
                     </div>
-                </div>
-                <div class="partie">
-                    
-                        <div class="titre-aid">Contact</div>
-                        <div class="box2-aid">
-                            <div class="titre2-aid">Adresse mail  : Soundrise@gmail.com</div>
-                            <div class="titre2-aid">Contacter nous :</div>
-                            <button class="contact">Contact</button>
+                    <div class="partie">
+                        
+                            <div class="titre-aid">Contact</div>
+                            <div class="box2-aid">
+                                <div class="titre2-aid">Adresse mail  : Soundrise@gmail.com</div>
+                                <div class="titre2-aid">Contacter nous :</div>
+                                <button class="contact">Contact</button>
 
-                        </div>
-                        <div class="titre3-aid">Avis
-                        <div class="box2-aid">
-                            
-                            <input  type = " text" class="avis" placeholder="Que pensez vous de soundrise ?"></input>
-                            <button class="send">Envoyer</button>
-                            <div class="rating">
-                                <input value="5" name="rate" id="star5" type="radio">
-                                <label title="text" for="star5"></label>
-                                <input value="4" name="rate" id="star4" type="radio">
-                                <label title="text" for="star4"></label>
-                                <input value="3" name="rate" id="star3" type="radio" checked="">
-                                <label title="text" for="star3"></label>
-                                <input value="2" name="rate" id="star2" type="radio">
-                                <label title="text" for="star2"></label>
-                                <input value="1" name="rate" id="star1" type="radio">
-                                <label title="text" for="star1"></label>
-                              </div>
+                            </div>
+                            <div class="titre3-aid">Avis
+                            <div class="box2-aid">
+                                
+                                <input  type = " text" class="avis" placeholder="Que pensez vous de soundrise ?"></input>
+                                <button class="send">Envoyer</button>
+                                <div class="rating">
+                                    <input value="5" name="rate" id="star5" type="radio">
+                                    <label title="text" for="star5"></label>
+                                    <input value="4" name="rate" id="star4" type="radio">
+                                    <label title="text" for="star4"></label>
+                                    <input value="3" name="rate" id="star3" type="radio" checked="">
+                                    <label title="text" for="star3"></label>
+                                    <input value="2" name="rate" id="star2" type="radio">
+                                    <label title="text" for="star2"></label>
+                                    <input value="1" name="rate" id="star1" type="radio">
+                                    <label title="text" for="star1"></label>
+                                </div>
 
-                        </div>
+                            </div>
+                    </div>
                 </div>
             </div>
                 
@@ -1365,7 +2091,122 @@
                 
                 
                 </div>
-            {% endif %}                      
+            {% endif %} 
+            
+            {% if page == "remboursement" %}
+            <div class = "onglet-parametre-default">
+                <div class="onglet-rem" >
+                <div class="box-rem">Sélectionnez la transaction
+                    <div class="tri-rem">
+                        <div class="tr1-rem">Id</div>
+                        <div class="tr2-rem">date</div>
+                        <div class="tr3-rem">Catégorie</div>
+                        <div class="tr4-rem">Montant</div>
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">38</div>
+                        <div class="contenu-rem">10/12</div>
+                        <div class="contenu-rem">Beat</div>
+                        <div class="contenu1-rem">5,99$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        <div class="contenu-rem">67</div>
+                        <div class="contenu-rem">22/07</div>
+                        <div class="contenu-rem">Abonnement</div>
+                        <div class="contenu1-rem">9,99$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">99</div>
+                        <div class="contenu-rem">13/06</div>
+                        <div class="contenu-rem">Retrait</div>
+                        <div class="contenu1-rem">20$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">55</div>
+                        <div class="contenu-rem">31/05</div>
+                        <div class="contenu-rem">Dépot</div>
+                        <div class="contenu1-rem">20$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">40</div>
+                        <div class="contenu-rem">19/09</div>
+                        <div class="contenu-rem">Beat</div>
+                        <div class="contenu1-rem">10$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">38</div>
+                        <div class="contenu-rem">10/12</div>
+                        <div class="contenu-rem">Beat</div>
+                        <div class="contenu1-rem">5,99$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        <div class="contenu-rem">67</div>
+                        <div class="contenu-rem">22/07</div>
+                        <div class="contenu-rem">Abonnement</div>
+                        <div class="contenu1-rem">9,99$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">99</div>
+                        <div class="contenu-rem">13/06</div>
+                        <div class="contenu-rem">Retrait</div>
+                        <div class="contenu1-rem">20$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">55</div>
+                        <div class="contenu-rem">31/05</div>
+                        <div class="contenu-rem">Dépot</div>
+                        <div class="contenu1-rem">20$</div>
+                        
+                    </div>
+                    <div class="ligne-rem">
+                        
+                        <div class="contenu-rem">40</div>
+                        <div class="contenu-rem">19/09</div>
+                        <div class="contenu-rem">Beat</div>
+                        <div class="contenu1-rem">10$</div>
+                        
+                    </div>
+                </div>
+                <div class="box2-rem">Demande de Remboursement
+                    <label class="description1">Quel est le problème ?</label>
+                    <input type ="text-rem" placeholder= "Décrivez votre problème"class="description">
+                    
+                    <select placeholder="Choisir"class ="justification">
+                        <option >Choisir</option>
+                        <option >Mauvaise manipulation</option>
+                        <option >Mauvais compte</option>
+                        <option >Incapacité de paiement</option>
+                        <option >autre</option>
+                    </select>
+                    <select type="" class="compte-rem">
+                        <option >Choisir</option>
+                        <option >Compte-1</option>
+                        <option >Compte-2</option>
+                        
+                        
+                    </select>
+
+                    <button class="valid">Valider</button>
+                </div>
+                </div>
+            </div>
+
+            {% endif %}
         </div>
 
     <script>
