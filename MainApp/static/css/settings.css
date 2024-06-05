@@ -287,6 +287,7 @@ html, body {
 .onglet-parametre-default{
     height: 100%;
     width: 100%;
+   
     
 }
 
@@ -294,8 +295,9 @@ html, body {
 /*-------------------------------------------------------- abonnement--------------------------------------------------------------------------------------------*/
 
 
+
 .me{
-    height: 60%;
+    height: 40%;
     width: 70%;
     background-color: #333333ff;
     margin-left: 15%;
@@ -305,8 +307,6 @@ html, body {
     flex-direction: row;
     justify-content: space-around;  
     font-size: 20px;
-    
-    
 }
 .abonnement1{
     height: 60%;
@@ -632,6 +632,9 @@ html, body {
   .card1 .button1:hover::after {
     width: 0;
     opacity: 0;
+  }
+  .card1:hover{
+    filter: brightness(1.7);
   }
   
   /*-------------------------------------------------------- activité--------------------------------------------------------------------------------------------*/
@@ -1387,15 +1390,260 @@ border: none;
 
     /*-------------------------------------------------------- default--------------------------------------------------------------------------------------------*/
 
-
-
+.onglet-def{
+    display: flex;
+    flex-direction: row;
+    margin-left:10%;
+    overflow-x: hidden;
+}
+    .profil-def {
+        width: 20%;
+        height: 75%;
+        margin-left: 4%;
+        margin-top: 70px;
+        border-radius: 15px;
+        background-color: none;
+        border-style: groove;
+        border: none;
+        display: flex;
+        flex-direction: column;
+        color: white;
+        text-align: center;
+        align-items: center;
+        justify-content: center;
+      }
+      
+      
+      
+      .logo-def {
+        width: 100px;
+        height: 100px;
+        background-color: white;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        margin-top: 10px;
+        border: none;
+        background-image: url(c1.png);
+        background-size: 100%;
+      }
+      .logo-def:hover {
+        filter: brightness(0.7);
+      }
+      .bio-def {
+        margin-top: 20px;
+        
+      }
+      .abonnement-def {
+        margin-top: 70px;
+        background: linear-gradient(90deg, darkviolet, blue);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        color: transparent;
+      }
+      .vente-def {
+        margin-top: 80px;
+        margin-bottom: 10px;
+      }
+      .abonne-def {
+        margin-top: 10px;
+        color: blue;
+        font-size: 20px;
+      }
+      .compte-reste {
+        height: 100%;
+        width: 100%;
+      }
+      .bio2-def {
+        margin-top: 10px;
+        margin-left: 27%;
+        color: white;
+      }
+      .espace-def {
+        height: 100px;
+        width: 400px;
+        margin-top: 2px;
+        margin-left: 25%;
+        border-radius: 10px;
+        background-color:#282828ff;
+        color: white;
+        text-align: center;
+        font-size: 20px;
+        word-wrap: normal;
+        border-style: groove;
+        border-image: linear-gradient(to right, darkviolet, blue) 1 1 10;
+      }
+      .question-def {
+        text-indent: 41%;
+        height: 10px;
+        color: transparent;
+      }
+      
+      
+      .formulaire-def {
+        height: 100%;
+        width: 100%;
+        padding-left: 12%;
+        padding-top: 0%;
+        display: flex;
+        flex-direction: row;
+      }
+      .form-def {
+        height: 60%;
+        width: 50%;
+      
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        color: white;
+      }
+      
+      .container-def {
+        display: flex;
+        width: 80%;
+        max-width: 900px;
+        background: #1e1e1e;
+        border-radius: 30px; /* Border radius for the container */
+        overflow: hidden;
+        box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+      
+        background: linear-gradient(#1e1e1e, #1e1e1e) padding-box,
+          linear-gradient(to right, #3e6db4, #b52781) border-box;
+        border-radius: 30px;
+        border: 8px solid transparent;
+      }
+      
+      .select-def{
+        width: 229px;
+        height:38px;
+        padding: 15px;
+        margin: 3px 0;
+        border-image: linear-gradient(to right, darkviolet, blue) 1 1 10;
+        
+        border-radius: 5px;
+        background: none;
+        color: #fff;
+        outline: none;
+      }
+      .select-def:hover{
+        background:linear-gradient(to right, darkviolet, blue) ;
+      }
+      .select-def option {
+        background: #1e1e1e;
+        color: #fff;
+        
+      }
+      
+      
+      
+      /* Optional: add custom dropdown arrow */
+      .countryf::after {
+        content: "";
+        position: absolute;
+        right: 15px;
+        pointer-events: none; /* Allows clicking on the select */
+        top: 50%;
+        transform: translateY(-50%);
+        width: 12px; /* Adjust size */
+        height: 12px; /* Adjust size */
+        background: url('data:image/svg+xml;charset=UTF-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="%23dadada" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-down"><polyline points="6 9 12 15 18 9"></polyline></svg>')
+          no-repeat center center;
+        background-size: contain; /* Make sure the SVG fits the container */
+      }
+      
+      .form-container {
+        padding: 50px;
+        flex: 1;
+        background: #1e1e1e;
+        color: #fff;
+      }
+      
+      
+      
+      
+      .exemple {
+        width: 200px;
+        height: 5px;
+        padding: 15px;
+        margin: 10px 0;
+        border-image: linear-gradient(to right, darkviolet, blue) 1 1 10;
+      
+        border-radius: 5px;
+        background: none;
+        color: #fff;
+        outline: none;
+        margin-bottom: 2px;
+        margin-top: 2px;
+        padding-left: 10px;
+      }
+      
+      .form-div {
+        display: flex;
+        position: relative;
+        border-bottom: 1px solid #d9d9d9;
+        align-items: center;
+        margin-bottom: 15px;
+      }
+      
+      .exemple {
+        color: white;
+        margin-bottom: 10px;
+      }
+      .perso {
+        text-indent:-20px;
+        color: white;
+        margin-bottom: 70px;
+      }
+      .perso2{
+        text-indent:-20px;
+        color: white;
+        margin-bottom: 30px;
+        margin-top: 52px;
+        white-space: nowrap;
+        font-size:20px ;
+      }
+      .form1-def {
+        width: 40%;
+      }
+      .form2-def {
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        margin-left: 5%;
+        margin-top: 3px;
+        color: white;
+      }
+      .exemple:hover {
+        background: linear-gradient(to right, darkviolet, blue);
+      }
+      .profil-def:hover {
+        
+        border-style: groove;
+        border-image: linear-gradient(to right, darkviolet, blue) 1 1 10;
+      }
+      .espace-def:hover {
+        filter: brightness(1.5);
+      }
+      .suppr {
+        margin-top: 66%;
+        margin-left: 9%;
+        width: 40%;
+        background-color: #1e1e1e;
+        border-radius: 10px;
+        color: red;
+        border: none;
+      }
+      .suppr:hover {
+        filter: brightness(0.7);
+      }
+      
 
 
 
      /*-------------------------------------------------------- historique-artist--------------------------------------------------------------------------------------------*/
 
      .recherche-art{
-        height: 3%;
+        height: 7%;
         width: 100%;
         
         display: flex;
@@ -1419,7 +1667,7 @@ border: none;
     
     
     .box-art{
-        height: 80%;
+        height: 160%;
         width: 40%;
         
         margin-left: 27%;
@@ -1546,7 +1794,7 @@ border: none;
 
 
 .recherche-bea{ 
-    height: 7%;
+    height: 5%;
     width: 100%;
     
     display: flex;
@@ -1773,7 +2021,7 @@ border: none;
 .gauche{
     height: 100%;
     width: 40%;
-
+margin-left: 5%;
     text-align: center;
     
 }
@@ -1791,6 +2039,7 @@ border: none;
 .middle{
     width: 2px;
     background-color: white;
+    margin-left: 40px;
 }
 .access{
     color: white;
@@ -1804,6 +2053,7 @@ border: none;
     font-size: 25px;
     margin-bottom: 10%;
     color: white;
+    margin-left: 10px;
 }
 .titre2-int{ 
     font-size: 20px;
@@ -1827,6 +2077,13 @@ border: none;
     display: flex;
     flex-direction: row;
     margin-left: 20%;
+    height: 20%;
+}
+.entier2{
+    margin-top: 10%;
+    display: flex;
+    flex-direction: row;
+    margin-left: 30%;
     height: 20%;
 }
 .select-int{
@@ -2018,7 +2275,7 @@ border: none;
     height: 90%;
     width: 30%;
     margin-top: 10px;
-    margin-left: 5%;
+    margin-left: 10%;
     overflow-y: scroll;
     color: white;
     font-size: 25px;
@@ -2145,7 +2402,7 @@ border: none;
 .justification:hover{
     filter: brightness(1.5);
 }
-.compte:hover{
+.compte-rem:hover{
     filter: brightness(1.5);
 }
 .box2-rem:hover{
@@ -2167,14 +2424,20 @@ border: none;
     filter: brightness(1.5);
 }
 
-
+.onglet-rem{
+    height: 100%;
+    width: 100%;
+    margin-top: 3%;
+    display: flex;
+    flex-direction: row;
+}
 
 /*-------------------------------------------------------- tableau --------------------------------------------------------------------------------------------*/
 
 
 .revenus{
     width: 100%;
-    height: 35%;
+    height: 70%;
     display: flex;
     flex-direction: row;
 }
@@ -2204,7 +2467,7 @@ border: none;
 }
 .stats{
     width: 100%;
-    height: 20%;
+    height: 40%;
     display: flex;
     flex-direction: row;
     text-indent: 10px;
@@ -2340,11 +2603,11 @@ border: none;
     text-indent: 1px;
 }
 .liste-tab{
-    height: 1000px;
+    height: 350px;
     width: 86.5%;
     background-color:none;
     margin-left: 6.5%;
-    margin-top: 3%;
+    margin-top: 4%;
     padding-bottom: 3%;
    
     overflow-y: scroll;
@@ -2428,7 +2691,7 @@ margin-top:-10px;
 }
 
 .inf1{
-    width: 13%;
+    width: 7%;
     height: 100%   ;
     background-image: url(c5.webp);
     background-color: #e66465;
@@ -2439,7 +2702,7 @@ margin-top:-10px;
 .inf2{
     width: 10%;
     height: 15%   ;
-    margin-top: 4.5%;
+    margin-top:1.5%;
     color: #ffffff;
     text-align: center;
     font-size: 20px;
@@ -2447,7 +2710,7 @@ margin-top:-10px;
 .inf3{
     width: 10%;
     height: 15%   ;
-    margin-top: 4.5%;
+    margin-top: 1.5%;
     
     text-align: center;
     font-size: 20px;
@@ -2535,9 +2798,286 @@ margin-top:-10px;
 
 /*-------------------------------------------------------- transactions --------------------------------------------------------------------------------------------*/
 
+.onglet-tr{
+    height: 100%;
+    width: 100%;
+}
+.box-tr {
+    height: 60%;
+    width: 90%;
+    margin-top: 10px;
+    margin-left: 5%;
+    overflow-y: scroll;
+    color: white;
+  }
+  .test{
+    width: 98%;
+    height: 20%;
+    margin-top: 2%;
+    border-style: groove;
+    border-image: linear-gradient(90deg, #e664d9, #2833ad) 1 1 10;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+  .test:hover{
+    background :linear-gradient(90deg, #e664d9, #2833ad)
+  }
+  .contenu-tr  {
+    height: 100%;
+    width: 10%;
+    margin-top: 10px;
+  }
+  .contenu1-tr  {
+    height: 100%;
+    width: 10%;
+    color: rgb(34, 253, 0);
+    margin-top: 10px;
+    font-size: 20px;
+  }
+  .tri-tr  {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 10px;
+  }
+  .tr1-tr  {
+    margin-left: 5px;
+    margin-right: 40px;
+    width: 10%;
+  }
+  .tr2-tr  {
+    margin-left: -40px;
+    width: 10%;
+  }
+  .tr3-tr  {
+    margin-left: -20px;
+    width: 10%;
+  }
+  .tr4-tr  {
+    margin-right: 10px;
+    width: 10%;
+  }
+  .cartes {
+    height: 35%;
+    width: 90%;
+    color: white;
+  
+    margin-left: 5%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    font-size: 30px;
+  }
+  .test2{
+    height: 80%;
+    width: 25%;
+    background-color: #2833ad;
+    margin-top: 1%;
+    border-radius: 20px;
+    box-shadow: 6px 6px 25px rgba(0, 0, 0, 0.5);
+    margin-right: 2%;
+    background-image: url(cb.png);
+    background-size: 99%;
+}
+.test2:hover{
+    filter: brightness(0.7);
+}
 
-
-
-
-
+  .title-tr  {
+    color: white;
+    text-align: center;
+    margin-top: -6px;
+  }
+  .download {
+    color: dark;
+  
+    margin-right: 30px;
+    width: 50%;
+    white-space: nowrap;
+    margin-top: 5px;
+  }     
+  .img-tr  {
+    height: 99%;
+    width: 10%;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    background-image: url(d.png);
+    background-size: 90%;
+    background-color: white;
+    background-position: center;
+    margin-left: 10px;
+  }
+  .end {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-left: 80%;
+    height: 30px;
+    width: 230px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background-color: none;
+    border-radius: 10px;
+  }
+  .end:hover {
+    filter: brightness(0.7);
+  }
+  .add-tr{
+    height: 18%;
+    margin-left: 10%;
+    margin-top: 5.5%;
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+}
+.add-tr:hover{
+    background-color:#0071e2;
+}
+  .add  {
+    height: 20%;
+    margin-left: 10%;
+    margin-top: 6%;
+    border: 2px solid #24b4fb;
+    background-color: #24b4fb;
+    border-radius: 0.9em;
+    padding: 0.8em 1.2em 0.8em 1em;
+    transition: all ease-in-out 0.2s;
+    font-size: 16px;
+  }
+  
+  .span-tr  {
+    display: flex;
+    flex-direction: row;
+    margin-top: -9%;
+  
+    align-items: center;
+    color: #fff;
+    font-weight: 600;
+  }
+  
+  .add :hover {
+    background-color: #0071e2;
+  }
+  
+  
+  
+  
+  
+  .button-tr {
+    --width: 100px;
+    --height: 35px;
+    --tooltip-height: 35px;
+    --tooltip-width: 90px;
+    --gap-between-tooltip-to-button: 18px;
+    --button-color: #1163ff;
+    --tooltip-color: #fff;
+    width: var(--width);
+    height: var(--height);
+    background: var(--button-color);
+    position: relative;
+    text-align: center;
+    border-radius: 0.45em;
+    font-family: "Arial";
+    transition: background 0.3s;
+  }
+  
+  .button-tr::before {
+    position: absolute;
+    content: attr(data-tooltip);
+    width: var(--tooltip-width);
+    height: var(--tooltip-height);
+    background-color: var(--tooltip-color);
+    font-size: 0.9rem;
+    color: #111;
+    border-radius: .25em;
+    line-height: var(--tooltip-height);
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) + 10px);
+    left: calc(50% - var(--tooltip-width) / 2);
+  }
+  
+  .button-tr::after {
+    position: absolute;
+    content: '';
+    width: 0;
+    height: 0;
+    border: 10px solid transparent;
+    border-top-color: var(--tooltip-color);
+    left: calc(50% - 10px);
+    bottom: calc(100% + var(--gap-between-tooltip-to-button) - 10px);
+  }
+  
+  .button-tr::after,.button-tr::before {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.5s;
+  }
+  
+  .text-tr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .button-wrapper,.text-tr,.icon-tr {
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    color: #fff;
+  }
+  
+  .text-tr {
+    top: 0
+  }
+  
+  .text-tr,.icon-tr {
+    transition: top 0.5s;
+  }
+  
+  .icon-tr {
+    color: #fff;
+    top: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .icon-tr svg {
+    width: 24px;
+    height: 24px;
+  }
+  
+  .button-tr {
+    background: #6c18ff;
+  }
+  
+  .button-tr:hover .text-tr {
+    top: -100%;
+  }
+  
+  .button-tr:hover .icon-tr {
+    top: 0;
+  }
+  
+  .button-tr:hover:before,.button-tr:hover:after {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .button-tr:hover:after {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button) - 20px);
+  }
+  
+  .button-tr:hover:before {
+    bottom: calc(var(--height) + var(--gap-between-tooltip-to-button));
+  }
+  
 /*-------------------------------------------------------- fin --------------------------------------------------------------------------------------------*/
